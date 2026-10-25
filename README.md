@@ -4,8 +4,6 @@
   </a>
 </p>
 
-<h1 align="center">GrabClip</h1>
-
 <p align="center">
   <b>Download videos, reels, playlists and whole courses to your PC.<br>A simple, offline-friendly Windows desktop app.</b>
 </p>
