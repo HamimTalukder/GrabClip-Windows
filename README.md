@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/logo-full.svg" alt="GrabClip" width="180">
+  <img src="https://raw.githubusercontent.com/HamimTalukder/GrabClip-Windows/main/assets/logo-full.svg" alt="GrabClip" width="180">
 </p>
 
 <p align="center">
