@@ -1,1 +1,40 @@
-
+name: Bug report
+description: Something did not work as expected
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping! **Never attach or paste your cookies.txt.**
+  - type: input
+    id: version
+    attributes:
+      label: GrabClip version
+      description: Settings → About GrabClip
+      placeholder: "1.0.0"
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version
+      placeholder: "Windows 11 23H2"
+  - type: dropdown
+    id: site
+    attributes:
+      label: Site
+      options: [YouTube, Facebook, Instagram, TikTok, Other, Not about a download]
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What did you do, what did you expect, and what happened instead? Copy the red error text if there is one.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Quality, format and extras you chose. Please do not post links to private or paid content.
