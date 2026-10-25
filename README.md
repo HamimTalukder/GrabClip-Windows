@@ -44,7 +44,8 @@
 
 ## Features
 
-**Download**
+### Download
+
 - **Analyze first:** thumbnail, title, site, duration and estimated size before you download.
 - **Sources:** YouTube, Facebook, Instagram, TikTok and many other sites.
 - **Video + Audio, Video only, Audio only.**
@@ -57,18 +58,13 @@
 - **Download as a course:** a playlist link becomes a course folder with numbered lessons.
 - **Many links at once:** paste up to 50 links, or drag a link onto the window.
 
-<table>
-  <tr>
-    <td width="50%"><img alt="Add download: choose quality and format" src="docs/screenshots/add-download.png"><br><sub>Add download: format, quality and estimated size</sub></td>
-    <td width="50%"><img alt="Library with course folders and progress" src="docs/screenshots/library.png"><br><sub>Library: course folders, watched marks and progress</sub></td>
-  </tr>
-  <tr>
-    <td width="50%"><img alt="Built-in player with notes" src="docs/screenshots/player.png"><br><sub>Built-in player with resume, speed and notes</sub></td>
-    <td width="50%"><img alt="Settings page" src="docs/screenshots/settings.png"><br><sub>Settings: folder, cookies, notifications, engine</sub></td>
-  </tr>
-</table>
+<p align="center">
+  <img alt="Add download: course folder, quality and format" src="docs/screenshots/add-download.png" width="560"><br>
+  <sub>Add download: a whole course, with quality and format</sub>
+</p>
 
-**Queue and control**
+### Queue and control
+
 - **One-by-one queue** that starts the next download by itself.
 - **Pause, resume, cancel.** Partial files are kept, so a download continues where it stopped.
 - **Saved queue:** waiting downloads come back after you restart the app.
@@ -78,7 +74,13 @@
 - **Disk space guard:** pauses before a download fails halfway.
 - **Link suggestion** from your clipboard, **duplicate warning**, and a **monthly data counter**.
 
-**Library and player**
+<p align="center">
+  <img alt="Night scheduler: start time, when finished, speed limit" src="docs/screenshots/scheduler.png" width="440"><br>
+  <sub>Night scheduler: run the queue later, then sleep or shut down</sub>
+</p>
+
+### Library and player
+
 - **Downloads, Queue, History and Library** pages with search, sort, filters and bulk actions.
 - **Courses:** lessons grouped in folders with watched marks; **Check for new lessons** adds only what is new.
 - **Built-in player:** resumes where you stopped, speed 1x to 2x, time-stamped notes, play next lesson.
@@ -86,7 +88,20 @@
 - **Send to phone:** scan a QR code over the same Wi-Fi.
 - **Make smaller copy (480p)** and **Extract audio (MP3)** from finished videos.
 
-**App**
+<p align="center">
+  <img alt="Library with a course folder and the preview panel" src="docs/screenshots/library.png" width="900"><br>
+  <sub>Library: course folders, watched progress and quick actions</sub>
+</p>
+
+<table>
+  <tr>
+    <td width="50%" valign="top" align="center"><img alt="Built-in player with speed and notes" src="docs/screenshots/player.png" width="440"><br><sub>Built-in player: resume, speed and notes</sub></td>
+    <td width="50%" valign="top" align="center"><img alt="Send to phone with a QR code" src="docs/screenshots/send-to-phone.png" width="440"><br><sub>Send to phone: scan the QR code on the same Wi-Fi</sub></td>
+  </tr>
+</table>
+
+### App
+
 - Windows notifications and a tray icon, so downloads keep running when you close the window.
 - **Update yt-dlp** button: fixes most "this site stopped working" problems without a new app version.
 - **Check for updates** button for new GrabClip versions.
@@ -135,6 +150,11 @@ Facebook, Instagram and some YouTube videos need you to be logged in. GrabClip u
 3. In GrabClip open **Settings → Cookies → Import** and pick the file.
 
 Cookies stay on your PC and are never uploaded. **Remove** deletes them any time.
+
+<p align="center">
+  <img alt="Settings: output folder, cookies, notifications and download engine" src="docs/screenshots/settings.png" width="760"><br>
+  <sub>Settings: output folder, cookies, notifications and the download engine</sub>
+</p>
 
 > [!WARNING]
 > `cookies.txt` is your logged-in session. **Never share it**, and never post it in an issue or a screenshot.
