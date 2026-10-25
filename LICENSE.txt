@@ -1,0 +1,57 @@
+GrabClip Freeware License
+
+Copyright (c) 2026 Hamim Talukder Soton. All rights reserved.
+
+This license applies to the GrabClip application for Windows (the "Software").
+The Software's source code is not published and is not licensed under this
+document.
+
+1. PERMISSION
+   You may download, install and use the Software free of charge, on your own
+   devices, for personal, non-commercial purposes.
+
+2. WHAT YOU MAY NOT DO
+   a) Sell, rent, lease or otherwise charge money for the Software, or include
+      it in a paid product or service.
+   b) Use the Software for commercial purposes.
+   c) Modify the Software, or distribute modified copies of it.
+   d) Re-host or redistribute the installer. Share a link to the official
+      Releases page instead:
+      https://github.com/HamimTalukder/GrabClip-Windows/releases
+   e) Reverse engineer, decompile or disassemble the Software, except where
+      applicable law allows it despite this restriction.
+   f) Remove copyright notices or the Software's name and logo, or present the
+      Software as your own work.
+
+3. YOUR CONTENT AND YOUR RESPONSIBILITY
+   The Software is a tool. You are solely responsible for what you download
+   and for making sure you have the right to save and use that content under
+   copyright law and the terms of the websites you use. The Software does not
+   host, store or share any media, and is not intended for DRM-protected
+   content.
+
+4. THIRD-PARTY COMPONENTS
+   The Software includes open-source programs, such as yt-dlp, FFmpeg and
+   aria2, shipped as separate executables. They are licensed by their authors
+   under their own licenses, listed in THIRD_PARTY_NOTICES.md. Nothing in this
+   license limits the rights those licenses give you for those programs.
+
+5. NO WARRANTY
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. Websites change, and
+   downloads may stop working at any time.
+
+6. LIMITATION OF LIABILITY
+   TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE AUTHOR IS NOT LIABLE FOR ANY
+   CLAIM, DAMAGES OR OTHER LIABILITY ARISING FROM THE USE OF, OR INABILITY TO
+   USE, THE SOFTWARE, INCLUDING LOSS OF DATA OR ACCOUNT RESTRICTIONS ON THIRD
+   PARTY WEBSITES.
+
+7. TERMINATION
+   This license ends automatically if you break its terms. Then you must stop
+   using the Software and delete your copies.
+
+8. CONTACT
+   Questions: open an issue at
+   https://github.com/HamimTalukder/GrabClip-Windows/issues
