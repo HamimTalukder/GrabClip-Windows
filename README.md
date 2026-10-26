@@ -100,11 +100,18 @@
 
 ### App
 
-- Windows notifications and a tray icon, so downloads keep running when you close the window.
+- **Automatic updates:** GrabClip checks GitHub for a new version and shows its release notes. You choose **Skip**, **Download and install** or **Download from GitHub**. Updates are digitally signed, so only genuine GrabClip files can be installed.
 - **Update yt-dlp** button: fixes most "this site stopped working" problems without a new app version.
-- **Check for updates** button for new GrabClip versions.
-- Cookies import with a health check per site.
+- **Guided cookies setup** in Bangla or English, with a health check per site.
+- **Settings in tabs:** General, Cookies, Updates, Help and About.
+- **Send a report** (email, GitHub issue, Discord or Facebook) and **Support the developer** in Settings → Help.
+- Windows notifications and a tray icon, so downloads keep running when you close the window.
 - Calm dark interface, works fully offline (fonts and icons are bundled).
+
+<p align="center">
+  <img alt="Settings with the Cookies tab: status and per-site health" src="docs/screenshots/settings.png" width="760"><br>
+  <sub>Settings: General, Cookies, Updates, Help and About</sub>
+</p>
 
 ## Install
 
@@ -115,10 +122,10 @@
 | Windows x64 | `GrabClip_<version>_x64-setup.exe` | Installs for your user only, no admin permission needed |
 
 1. Open the [latest release](https://github.com/HamimTalukder/GrabClip-Windows/releases/latest).
-2. Download the `.exe` under **Assets**.
+2. Download the `.exe` under **Assets** (you do not need the `.sig` and `latest.json` files, the app uses them for updates).
 3. Run it and finish the installer, then open **GrabClip** from the Start menu.
 
-**Windows shows a blue "Windows protected your PC" screen?** The installer is not code-signed yet (signing costs money), so SmartScreen warns about every new app. Click **More info → Run anyway**. To verify your download, compare its SHA-256 with the one shown next to the file on the release page:
+**Windows shows a blue "Windows protected your PC" screen?** The installer is not code-signed with a Windows certificate yet (it costs money), so SmartScreen warns about every new app. Click **More info → Run anyway**. To verify your download, compare its SHA-256 with the one shown next to the file on the release page:
 
 ```powershell
 Get-FileHash .\GrabClip_1.0.0_x64-setup.exe -Algorithm SHA256
@@ -126,7 +133,7 @@ Get-FileHash .\GrabClip_1.0.0_x64-setup.exe -Algorithm SHA256
 
 Some antivirus programs flag the installer because yt-dlp and ffmpeg are inside. This is a false positive.
 
-**Update:** run the new installer over the old one (settings, history and library are kept), or use **Settings → Check for updates**. All versions and their notes are on the [Releases page](https://github.com/HamimTalukder/GrabClip-Windows/releases) and in the [changelog](CHANGELOG.md).
+**Update:** when a new version is out, GrabClip shows a window with the release notes. Choose **Download and install**: the app downloads the installer, checks its signature, installs it and restarts itself. Your settings, history and library are kept. Install waits while a download is running or a night schedule is set. You can also check by hand in **Settings → Updates → Check for updates**, or run the new installer over the old one. All versions are on the [Releases page](https://github.com/HamimTalukder/GrabClip-Windows/releases) and in the [changelog](CHANGELOG.md).
 
 **Uninstall:** Settings → Apps → GrabClip. Your downloaded videos are never touched.
 
@@ -141,17 +148,18 @@ The download appears in the list with live progress. Finished files go to **Libr
 
 ## Private and login-only videos (cookies)
 
-Facebook, Instagram and some YouTube videos need you to be logged in. GrabClip uses a `cookies.txt` file from your own browser:
+Facebook private groups, Instagram and some YouTube videos need you to be logged in. GrabClip uses a `cookies.txt` file from your own browser, and it guides you step by step, in Bangla or English. The guide opens by itself the first time, and any time later from **Settings → Cookies → How to get cookies.txt**. A red dot on Settings reminds you while no cookies are imported.
 
-1. Install **Get cookies.txt LOCALLY** for [Chrome / Edge / Brave](https://chromewebstore.google.com/detail/get-cookiestxt-locally/cclelndahbckbenkjhflpdbgdldlbecc) or [Firefox](https://addons.mozilla.org/en-US/firefox/addon/get-cookies-txt-locally/).
-2. Log into the site in your browser, open the extension and **Export**.
-3. In GrabClip open **Settings → Cookies → Import** and pick the file.
+1. Log into the site in your browser.
+2. Install the free extension **Get cookies.txt LOCALLY** for [Chrome / Edge / Brave](https://chromewebstore.google.com/detail/get-cookiestxt-locally/cclelndahbckbenkjhflpdbgdldlbecc) or [Firefox](https://addons.mozilla.org/en-US/firefox/addon/get-cookies-txt-locally/).
+3. Open the extension on that site and **Export**.
+4. In GrabClip open **Settings → Cookies → Import** and pick the file.
 
 Cookies stay on your PC and are never uploaded. **Remove** deletes them any time.
 
 <p align="center">
-  <img alt="Settings: output folder, cookies, notifications and download engine" src="docs/screenshots/settings.png" width="760"><br>
-  <sub>Settings: output folder, cookies, notifications and the download engine</sub>
+  <img alt="The step-by-step cookies guide" src="docs/screenshots/cookies-guide.png" width="560"><br>
+  <sub>The built-in cookies guide, in Bangla or English</sub>
 </p>
 
 > [!WARNING]
@@ -161,21 +169,23 @@ Cookies stay on your PC and are never uploaded. **Remove** deletes them any time
 
 | Problem | Fix |
 |---|---|
-| A site stopped working | **Settings → Download engine → Update yt-dlp** |
-| "Sign in" or bot-check error | Export fresh cookies and import them again (**Update cookies**) |
+| A site stopped working | **Settings → Updates → Update yt-dlp** |
+| "Sign in" or bot-check error | Export fresh cookies and import them again (**Settings → Cookies → Replace**) |
 | File cannot be saved | Use a normal folder, not inside OneDrive and not a "Controlled folder access" location |
 | MP4 does not play in an old player | Some sites use VP9 / AV1 video. Try VLC or the built-in player |
 | Send to phone does not open | Phone and PC must be on the same Wi-Fi. Allow GrabClip in the Windows Firewall prompt |
 | Built-in player shows nothing | It plays MP4 (H.264), WebM and similar. Use **Show in folder** for other files |
 | Low speed | Turn on **Fast download** in step 3 of Add download |
 
-**Where your data lives:** `%APPDATA%\GrabClip` (settings, history, saved queue, cookies). Still stuck? [Open an issue](https://github.com/HamimTalukder/GrabClip-Windows/issues/new/choose) and describe what happened. Do not attach your cookies.
+**Where your data lives:** `%APPDATA%\GrabClip` (settings, history, saved queue, cookies). Still stuck? Use **Settings → Help → Send a report**, or [open an issue](https://github.com/HamimTalukder/GrabClip-Windows/issues/new/choose) and describe what happened. Do not attach your cookies.
 
 ## FAQ
 
 **Is it free?** Yes, free for personal use. See the [license](LICENSE.txt).
 
-**Does it upload my links or files?** No. There are no accounts and no tracking. The app only talks to the sites you download from, and to GitHub when you check for updates.
+**Does it upload my links or files?** No. There are no accounts and no tracking. The app only talks to the sites you download from, and to GitHub when it checks for updates.
+
+**How can I support GrabClip?** **Settings → Help → Support the developer**. A star on this repository or sharing the app with a friend also helps a lot.
 
 **Mac or Linux?** Windows only for now.
 
