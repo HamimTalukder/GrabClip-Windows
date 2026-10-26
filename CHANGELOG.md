@@ -39,9 +39,13 @@ First public release. 🎉
 - Make smaller copy (480p) and Extract audio (MP3).
 
 ### App
+- Automatic, signed updates: release notes with Skip, Download and install, or Download from GitHub.
+- Update yt-dlp button.
+- Guided cookies setup in Bangla or English, with a health check per site.
+- Settings in tabs: General, Cookies, Updates, Help and About.
+- Send a report and Support the developer (Settings → Help).
 - Windows notifications and tray icon.
-- Update yt-dlp button and Check for updates button.
-- Cookies import with per-site health check.
+- Only one GrabClip window opens at a time.
 - Custom output folder.
 - Dark Graphite + Sage theme, fully offline-friendly.
 - Per-user installer, no admin permission needed.
