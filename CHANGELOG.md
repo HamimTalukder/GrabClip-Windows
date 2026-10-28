@@ -2,9 +2,7 @@
 
 All notable changes to GrabClip for Windows are listed here, newest first.
 
-## 1.0.0 - 2026-10-25
-
-First public release. 🎉
+## 1.0.1 - 2026-10-25
 
 ### Downloading
 - Add download in three steps: link, format, extras.
