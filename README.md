@@ -128,7 +128,7 @@
 **Windows shows a blue "Windows protected your PC" screen?** The installer is not code-signed with a Windows certificate yet (it costs money), so SmartScreen warns about every new app. Click **More info → Run anyway**. To verify your download, compare its SHA-256 with the one shown next to the file on the release page:
 
 ```powershell
-Get-FileHash .\GrabClip_1.0.0_x64-setup.exe -Algorithm SHA256
+Get-FileHash .\GrabClip_1.0.1_x64-setup.exe -Algorithm SHA256
 ```
 
 Some antivirus programs flag the installer because yt-dlp and ffmpeg are inside. This is a false positive.
