@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GrabClip Help Center — Setup &amp; Troubleshooting</title>
+<meta name="description" content="Learn how to install GrabClip, configure cookies, manage downloads, organize courses, transfer files and fix common errors.">
+<link rel="canonical" href="https://grabclip.pages.dev/help/">
+<meta name="theme-color" content="#0B0F0E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GrabClip">
+<meta property="og:title" content="GrabClip Help Center — Setup &amp; Troubleshooting">
+<meta property="og:description" content="Learn how to install GrabClip, configure cookies, manage downloads, organize courses, transfer files and fix common errors.">
+<meta property="og:url" content="https://grabclip.pages.dev/help/">
+<meta property="og:image" content="https://grabclip.pages.dev/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/logo-icon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/plus-jakarta-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css">
+<script src="/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="announce">GrabClip <b data-version>1.0.1</b> is out. <a href="/changelog/">Explore what's new</a></div>
+<header class="site-head">
+<div class="wrap bar">
+<a class="brand" href="/" aria-label="GrabClip home"><img src="/assets/logo-icon.svg" alt="" width="30" height="30"><img src="/assets/logo-text.svg" alt="GrabClip" width="88" height="20"></a>
+<nav class="pill-nav" aria-label="Main"><a href="/features/">Features</a><a href="/#how">How it works</a><a href="/help/" aria-current="page">Help</a><a href="/changelog/">Changelog</a></nav>
+<div class="bar-end">
+<a class="gh" href="https://github.com/HamimTalukder/GrabClip-Windows"><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-github"/></svg><span>GitHub</span></a>
+<a class="btn btn-mint btn-sm" href="https://github.com/HamimTalukder/GrabClip-Windows/releases/latest" data-download><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-download"/></svg>Download</a>
+</div>
+</div>
+</header>
+<main id="main">
+<section class="page-hero">
+  <div class="wrap">
+    <h1 class="display"><span>Let's get your</span><span>download unstuck.</span></h1>
+    <p class="lead">Find setup instructions, practical guides and troubleshooting steps for the most common GrabClip questions.</p>
+  </div>
+</section>
+
+<div class="wrap" data-filter>
+  <div class="search">
+    <svg class="ic" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-search"/></svg>
+    <input type="search" data-q placeholder="Search setup, cookies, speed, playback..." aria-label="Search the Help Center" autocomplete="off">
+  </div>
+  <div class="filter" role="group" aria-label="Topics">
+    <button type="button" data-set="all" aria-pressed="true">All</button>
+    <button type="button" data-set="start" aria-pressed="false">Getting started</button>
+    <button type="button" data-set="courses" aria-pressed="false">Courses</button>
+    <button type="button" data-set="cookies" aria-pressed="false">Cookies and login</button>
+    <button type="button" data-set="queue" aria-pressed="false">Queue and speed</button>
+    <button type="button" data-set="library" aria-pressed="false">Library and player</button>
+    <button type="button" data-set="phone" aria-pressed="false">Phone transfer</button>
+    <button type="button" data-set="updates" aria-pressed="false">Updates and errors</button>
+    <button type="button" data-set="privacy" aria-pressed="false">Privacy and safety</button>
+  </div>
+
+  <div class="arts">
+    <div data-group>
+      <h2 class="cat-title">Getting started</h2>
+
+      <details id="install-grabclip" data-item data-cat="start"><summary>Install GrabClip<svg class="ic plus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-plus"/></svg><svg class="ic minus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-minus"/></svg></summary><div class="ans">
+        <ol class="steps">
+          <li>Press Download on this site. Or open the latest GitHub release and download <code>GrabClip_&lt;version&gt;_x64-setup.exe</code> under Assets.</li>
+          <li>Run the installer and complete the setup. It installs for your user only, so no admin permission is needed.</li>
+          <li>Open GrabClip from the Windows Start menu.</li>
+        </ol>
+        <p>Windows shows a blue "Windows protected your PC" screen? That is explained in <a href="#smartscreen">Windows says it protected your PC</a>.</p>
+      </div></details>
+
+      <details id="first-download" data-item data-cat="start"><summary>Your first download<svg class="ic plus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-plus"/></svg><svg class="ic minus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-minus"/></svg></summary><div class="ans">
+        <p>Your first download takes a few steps. You don't need to install Python or use a command line.</p>
+        <ol class="steps">
+          <li>Open GrabClip, press <b>Add download</b>, choose the source tab and paste the link.</li>
+          <li>Press <b>Analyze link</b> or Enter. Check the title, source, duration and estimated size.</li>
+          <li>Choose the content type, quality and format, then press <b>Next</b>.</li>
+          <li>Where available, choose subtitles, thumbnail, fast download or a specific time range.</li>
+          <li>Press <b>Download</b>. Follow the progress in Downloads. Finished files appear in Library.</li>
+        </ol>
+        <div class="note"><b>Still stuck?</b> If the source needs you to sign in, follow <a href="#cookies-import">the cookies guide</a>. If a site has stopped working, try Settings, Updates, Update yt-dlp.</div>
+      </div></details>
+
+      <details id="format-quality" data-item data-cat="start" data-k="webm mp4 mp3 aac opus flac 1080p 4k audio"><summary>Choose a format and quality<svg class="ic plus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-plus"/></svg><svg class="ic minus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-minus"/></svg></summary><div class="ans">
+        <p><b>Content:</b> Video + Audio, Video only, or Audio only.</p>
+        <p><b>Quality:</b> Best (no limit), 4K, 1440p, 1080p, 720p, 480p, 360p or 144p, where the video offers it. For audio you can choose Best, MP3, AAC, OPUS or FLAC.</p>
+        <p><b>Format:</b> WEBM keeps the original file from the site with no conversion. MP4 converts it. Step 2 shows an estimated size so you know what to expect.</p>
+        <p>Some old players cannot play MP4 files that hold VP9 or AV1 video. Try VLC or the built-in player.</p>
+      </div></details>
+
+      <details id="many-links" data-item data-cat="start" data-k="batch paste drag drop"><summary>Download multiple links<svg class="ic plus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-plus"/></svg><svg class="ic minus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-minus"/></svg></summary><div class="ans">
+        <p>Paste up to 50 links in the link box, one per line. Pressing Ctrl+V outside a text box or dragging a link onto the window also opens Add download with the links filled in.</p>
+        <p>GrabClip analyzes them one by one, and they share the quality and format you choose. Links that fail are skipped and counted. Each link becomes its own download, without course or time-range options.</p>
+      </div></details>
+    </div>
+
+    <div data-group>
+      <h2 class="cat-title">Courses</h2>
+
+      <details id="course-download" data-item data-cat="courses" data-k="playlist course folder lessons"><summary>Download a playlist as a course<svg class="ic plus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-plus"/></svg><svg class="ic minus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-minus"/></svg></summary><div class="ans">
+        <ol class="steps">
+          <li>Paste the playlist link in Add download. For YouTube playlist links, <b>This is a playlist</b> switches on by itself.</li>
+          <li>Press <b>Analyze link</b>. In step 2, type a <b>Course folder</b> name. Lessons are saved as 01, 02, 03 and so on.</li>
+          <li>Choose quality and format, then press <b>Download</b>. The lessons appear in Library, grouped under the course folder.</li>
+        </ol>
+        <div class="shot-in"><img src="/assets/shots/add-2-format.webp" width="850" height="731" alt="Add download step 2 with the course folder name box" loading="lazy" decoding="async"></div>
+      </div></details>
+
+      <details id="watched-lessons" data-item data-cat="courses"><summary>Track watched lessons<svg class="ic plus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-plus"/></svg><svg class="ic minus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-minus"/></svg></summary><div class="ans">
+        <p>In Library, each course folder shows how many lessons it has and how many you have watched, with a small progress bar. A lesson is marked watched when you reach about 90 percent of it, or when you choose <b>Mark as watched</b> in its preview.</p>
+      </div></details>
+
+      <details id="new-lessons" data-item data-cat="courses" data-k="update playlist refresh"><summary>Check for new lessons<svg class="ic plus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-plus"/></svg><svg class="ic minus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-minus"/></svg></summary><div class="ans">
+        <p>In Library, press the small refresh button next to the course name. GrabClip checks the playlist again and opens Add download with only the lessons you do not have yet, in the same course folder. Numbering continues from the playlist position.</p>
+        <p>Courses saved before this feature existed have no playlist link, so they show no refresh button.</p>
+      </div></details>
+    </div>
+
+    <div data-group>
+      <h2 class="cat-title">Cookies and login</h2>
+
+      <details id="cookies-import" data-item data-cat="cookies" data-k="cookies.txt private facebook instagram login export"><summary>How to import cookies<svg class="ic plus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-plus"/></svg><svg class="ic minus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-minus"/></svg></summary><div class="ans">
+        <p>Some videos need you to be signed in to the source website, for example Facebook private groups, Instagram and some YouTube videos. GrabClip can use a <code>cookies.txt</code> file exported from your own browser to reach content your account can see.</p>
+        <ol class="steps">
+          <li>Sign in to the website in your browser.</li>
+          <li>Install the free extension <b>Get cookies.txt LOCALLY</b> for <a href="https://chromewebstore.google.com/detail/get-cookiestxt-locally/cclelndahbckbenkjhflpdbgdldlbecc">Chrome, Edge or Brave</a>, or for <a href="https://addons.mozilla.org/en-US/firefox/addon/get-cookies-txt-locally/">Firefox</a>.</li>
+          <li>Open the extension on that website and press <b>Export</b>. Export only the site you need.</li>
+          <li>In GrabClip, open <b>Settings, Cookies, Import</b> and pick the file.</li>
+        </ol>
+        <p>GrabClip also shows a short guide in Bangla or English. It opens by itself the first time, and later from Settings, Cookies, How to get cookies.txt. A red dot on Settings reminds you while no cookies are imported.</p>
+        <div class="shot-in"><img src="/assets/shots/settings-cookies.webp" width="940" height="465" alt="Settings, Cookies tab showing imported cookies and a health check for each site" loading="lazy" decoding="async"></div>
+        <div class="note"><b>Your cookies file is your logged-in session.</b> Never share it, attach it to a bug report, or include it in a screenshot. Keep it private, and remove it when you no longer need it.</div>
+      </div></details>
+
+      <details id="cookies-replace" data-item data-cat="cookies"><summary>Replace or remove cookies<svg class="ic plus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-plus"/></svg><svg class="ic minus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-minus"/></svg></summary><div class="ans">
+        <p>Open <b>Settings, Cookies</b>. <b>Replace</b> imports a newer file. <b>Remove</b> deletes the cookies from your PC at any time. The list below shows each site and how many days of login are left, or "no login found".</p>
+      </div></details>
+
+      <details id="signin-errors" data-item data-cat="cookies" data-k="bot check sign in reload error"><summary>Fix sign-in and bot-check errors<svg class="ic plus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-plus"/></svg><svg class="ic minus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-minus"/></svg></summary><div class="ans">
+        <p>If a download fails with a sign-in or bot-check message, export fresh cookies and import them again with <b>Settings, Cookies, Replace</b>.</p>
+        <p>If the message says the page needs to be reloaded, the cookies are old or broken. Remove them, or import fresh ones. If a whole site has stopped working, <a href="#update-ytdlp">update yt-dlp</a> as well.</p>
+      </div></details>
+    </div>
+
+    <div data-group>
+      <h2 class="cat-title">Queue and speed</h2>
+
+      <details id="pause-resume" data-item data-cat="queue"><summary>Pause and resume<svg class="ic plus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-plus"/></svg><svg class="ic minus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-minus"/></svg></summary><div class="ans">
+        <p>Press the round button at the start of a row to pause a queued or running download. Press it again to resume. Partial files are kept, so a download continues where it stopped. The queue is saved, so waiting downloads come back after you restart the app.</p>
+      </div></details>
+
+      <details id="study-mode" data-item data-cat="queue" data-k="speed limit bandwidth"><summary>Use Study mode<svg class="ic plus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-plus"/></svg><svg class="ic minus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-minus"/></svg></summary><div class="ans">
+        <p>On the Downloads page, press <b>Study</b> on the Current speed card. Each press cycles through Off, 500 KB/s, 1 MB/s and 2 MB/s. The limit applies to downloads that start after the change, and when the Night scheduler has its own limit, the smaller one wins.</p>
+      </div></details>
+
+      <details id="night-scheduler" data-item data-cat="queue" data-k="schedule sleep shut down"><summary>Schedule night downloads<svg class="ic plus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-plus"/></svg><svg class="ic minus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-minus"/></svg></summary><div class="ans">
+        <ol class="steps">
+          <li>Add the downloads you want to the queue.</li>
+          <li>Press <b>Set up</b> on the Night scheduler card (or <b>Schedule</b> on the Queue page).</li>
+          <li>Choose the start time, what happens when the queue finishes (Do nothing, Sleep or Shut down) and an optional speed limit.</li>
+          <li>Press <b>Start schedule</b>.</li>
+        </ol>
+        <p>Keep GrabClip open while it waits. Windows is kept from falling asleep until the schedule starts. A shut down gives you a 60 second countdown to cancel.</p>
+        <div class="shot-in"><img src="/assets/shots/scheduler.webp" width="670" height="605" alt="The Night scheduler dialog" loading="lazy" decoding="async"></div>
+      </div></details>
+
+      <details id="slow-downloads" data-item data-cat="queue" data-k="slow fast speed"><summary>Fix slow downloads<svg class="ic plus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-plus"/></svg><svg class="ic minus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-minus"/></svg></summary><div class="ans">
+        <p>Turn on <b>Fast download</b> in the last step of Add download. It uses several connections at once for video downloads. Also check that Study mode and the Night scheduler speed limit are off. Actual speed depends on your network and on the source website.</p>
+      </div></details>
+    </div>
+
+    <div data-group>
+      <h2 class="cat-title">Library and player</h2>
+
+      <details id="find-files" data-item data-cat="library" data-k="folder output where"><summary>Find your files<svg class="ic plus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-plus"/></svg><svg class="ic minus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-minus"/></svg></summary><div class="ans">
+        <p>Finished downloads are in <b>Library</b>. Press the folder icon or <b>Show in folder</b> to open Windows Explorer with the file selected. New files are saved to the folder chosen in Settings, General, which is your Downloads folder by default.</p>
+        <p>Avoid OneDrive and "Controlled folder access" locations, because Windows can block saving files there.</p>
+      </div></details>
+
+      <details id="notes" data-item data-cat="library"><summary>Use timestamped notes<svg class="ic plus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-plus"/></svg><svg class="ic minus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-minus"/></svg></summary><div class="ans">
+        <p>Open a video in the built-in player, type in <b>Note at this time</b> and press <b>Add note</b>. Each note keeps its time. Click the time to jump back to that moment. Notes are saved for each video.</p>
+        <div class="shot-in"><img src="/assets/shots/player.webp" width="1330" height="1040" alt="The built-in player with speed buttons and a timestamped note" loading="lazy" decoding="async"></div>
+      </div></details>
+
+      <details id="search-videos" data-item data-cat="library" data-k="subtitles transcript find word"><summary>Search inside videos<svg class="ic plus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-plus"/></svg><svg class="ic minus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-minus"/></svg></summary><div class="ans">
+        <p>In Library, press the subtitles button inside the search box to search inside videos. Results are grouped by video, with the time and the matching text. Click one to open the player at that second.</p>
+        <p>This works only for videos that have subtitles and were downloaded with GrabClip. Older downloads have no searchable text, and GrabClip does not turn speech into text.</p>
+      </div></details>
+
+      <details id="copies" data-item data-cat="library" data-k="480p mp3 extract audio smaller"><summary>Make a smaller copy or extract audio<svg class="ic plus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-plus"/></svg><svg class="ic minus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-minus"/></svg></summary><div class="ans">
+        <p>Open a finished video in Library and choose <b>Make smaller copy (480p)</b> or <b>Extract audio (MP3)</b>. The new file is saved next to the original, and the original is never overwritten. It runs one at a time, and not while a download is running.</p>
+      </div></details>
+    </div>
+
+    <div data-group>
+      <h2 class="cat-title">Phone transfer</h2>
+
+      <details id="phone-transfer" data-item data-cat="phone" data-k="qr wifi send to phone"><summary>Send a video to your phone<svg class="ic plus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-plus"/></svg><svg class="ic minus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-minus"/></svg></summary><div class="ans">
+        <ol class="steps">
+          <li>Connect your phone and PC to the same Wi-Fi network.</li>
+          <li>In Library, open a finished video and press <b>Send to phone</b>.</li>
+          <li>Scan the QR code with your phone camera. If Windows asks, allow GrabClip on private networks.</li>
+          <li>Press <b>Stop sharing</b> when you are done. The link also stops working after 10 minutes.</li>
+        </ol>
+        <div class="shot-in"><img src="/assets/shots/send-to-phone.webp" width="670" height="766" alt="Send to phone dialog with a QR code" loading="lazy" decoding="async"></div>
+      </div></details>
+
+      <details id="phone-fails" data-item data-cat="phone" data-k="firewall qr not opening"><summary>The QR link does not open<svg class="ic plus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-plus"/></svg><svg class="ic minus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-minus"/></svg></summary><div class="ans">
+        <p>Make sure the phone and PC are on the same Wi-Fi network, and allow GrabClip in the Windows Firewall prompt on private networks. If more than ten minutes have passed, start sharing again to get a new link.</p>
+      </div></details>
+    </div>
+
+    <div data-group>
+      <h2 class="cat-title">Updates and errors</h2>
+
+      <details id="update-ytdlp" data-item data-cat="updates" data-k="site stopped working not downloading"><summary>Update yt-dlp when a website stops working<svg class="ic plus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-plus"/></svg><svg class="ic minus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-minus"/></svg></summary><div class="ans">
+        <p>Open <b>Settings, Updates, Update yt-dlp</b>. Websites change often, and this fixes many "this site stopped working" problems without a new version of GrabClip. GrabClip also checks by itself and shows a red dot on Settings when a newer version is available.</p>
+        <p>If the problem stays, <a href="#report">report it</a> with the error details. Never attach your cookies file.</p>
+        <div class="shot-in"><img src="/assets/shots/settings-updates.webp" width="940" height="477" alt="Settings, Updates tab with Update yt-dlp" loading="lazy" decoding="async"></div>
+      </div></details>
+
+      <details id="update-grabclip" data-item data-cat="updates"><summary>Update GrabClip<svg class="ic plus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-plus"/></svg><svg class="ic minus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-minus"/></svg></summary><div class="ans">
+        <p>GrabClip looks for a new version when it starts and shows the release notes with three choices: <b>Skip</b>, <b>Download and install</b> or <b>Download from GitHub</b>. With Download and install, the app downloads the installer, checks its signature, installs it and restarts. Your settings, history and library are kept.</p>
+        <p>You can also check by hand in <b>Settings, Updates, Check for updates</b>, or run the new installer over the old one. An install waits while a download is running or a night schedule is set.</p>
+      </div></details>
+
+      <details id="smartscreen" data-item data-cat="updates" data-k="windows protected your pc blue warning run anyway"><summary>Windows says it protected your PC<svg class="ic plus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-plus"/></svg><svg class="ic minus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-minus"/></svg></summary><div class="ans">
+        <p>The installer is not signed with a paid Windows certificate yet, so SmartScreen warns about it. Compare its SHA-256 hash with the one on the GitHub release page, then choose <b>More info, Run anyway</b>. The full explanation is on the <a href="/download/#smartscreen">Download page</a>.</p>
+      </div></details>
+
+      <details id="antivirus" data-item data-cat="updates"><summary>My antivirus flags the installer<svg class="ic plus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-plus"/></svg><svg class="ic minus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-minus"/></svg></summary><div class="ans">
+        <p>Some security programs flag installers that bundle yt-dlp and FFmpeg. Check the SHA-256 hash against the official release first, and look into any detection you cannot explain before you run the file.</p>
+      </div></details>
+
+      <details id="save-error" data-item data-cat="updates" data-k="cannot save permission onedrive controlled folder"><summary>A file cannot be saved<svg class="ic plus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-plus"/></svg><svg class="ic minus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-minus"/></svg></summary><div class="ans">
+        <p>Use a normal folder, not one inside OneDrive and not a "Controlled folder access" location. Change it in <b>Settings, General, Change</b>.</p>
+      </div></details>
+
+      <details id="mp4-play" data-item data-cat="updates" data-k="player black screen codec vp9 av1"><summary>A video does not play<svg class="ic plus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-plus"/></svg><svg class="ic minus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-minus"/></svg></summary><div class="ans">
+        <p>The built-in player plays MP4 (H.264), WebM and similar files. For anything else, use <b>Show in folder</b> and open the file in another player. Some MP4 files hold VP9 or AV1 video that old players cannot play. VLC handles them.</p>
+      </div></details>
+    </div>
+
+    <div data-group>
+      <h2 class="cat-title">Privacy and safety</h2>
+
+      <details id="data-location" data-item data-cat="privacy" data-k="appdata settings history"><summary>Where GrabClip stores data<svg class="ic plus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-plus"/></svg><svg class="ic minus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-minus"/></svg></summary><div class="ans">
+        <p>Settings, history, the saved queue, player notes and cookies are stored in <code>%APPDATA%\GrabClip</code>. Downloaded files go to your output folder. Uninstalling GrabClip does not touch your downloaded videos.</p>
+      </div></details>
+
+      <details id="protect-cookies" data-item data-cat="privacy"><summary>Protect your cookies<svg class="ic plus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-plus"/></svg><svg class="ic minus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-minus"/></svg></summary><div class="ans">
+        <p>Your cookies file is your logged-in session. Never share it, post it in an issue, or leave it visible in a screenshot. Remove it from <b>Settings, Cookies, Remove</b> when you no longer need it. Cookies stay on your PC, and GrabClip has no server it could send them to.</p>
+      </div></details>
+    </div>
+
+    <p class="empty" data-empty hidden>No guide matches that search. Try a shorter word, or <a href="#report">report a problem</a>.</p>
+  </div>
+</div>
+
+<section class="sec" id="report">
+  <div class="wrap split">
+    <div>
+      <h2 class="h2">Something not working as expected?</h2>
+      <p class="lead">Before reporting a problem, check the guide above and try the recommended steps. If the problem stays, send a report from GrabClip (Settings, Help, Send a report) or open a GitHub issue.</p>
+      <div class="note"><b>Never attach</b> <code>cookies.txt</code>, login details or other session secrets to a report.</div>
+      <div class="links">
+        <a class="link-btn" href="https://github.com/HamimTalukder/GrabClip-Windows/issues/new/choose"><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-bug"/></svg>Open a GitHub issue</a>
+        <a class="link-btn" href="#" data-contact="email"><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-mail"/></svg>Email</a>
+        <a class="link-btn" href="#" data-contact="discord"><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-chat"/></svg>Discord</a>
+        <a class="link-btn" href="#" data-contact="facebook"><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-facebook"/></svg>Facebook</a>
+      </div>
+    </div>
+    <div class="prose">
+      <h3>What to include</h3>
+      <ul>
+        <li>GrabClip version (Settings, About)</li>
+        <li>Windows version</li>
+        <li>What you were trying to do</li>
+        <li>What happened instead</li>
+        <li>The error message or a screenshot that hides private details</li>
+        <li>Steps to reproduce it, if you can</li>
+      </ul>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="foot">
+<div class="wrap">
+<div class="made rv">
+<svg class="ic spark s1" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-sparkle"/></svg><svg class="ic spark s2" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-sparkle"/></svg><svg class="ic spark s3" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-sparkle"/></svg>
+<p class="made-t">Made with <em>curiosity</em></p>
+<p class="made-by">by <a href="/about/">Hamim Talukder Soton</a></p>
+</div>
+<div class="foot-grid">
+<div>
+<a class="brand" href="/" aria-label="GrabClip home"><img src="/assets/logo-icon.svg" alt="" width="56" height="56"><img src="/assets/logo-text.svg" alt="" width="158" height="36"></a>
+<p class="foot-note">From link to library. Without the busywork.</p>
+</div>
+<div><h4>Product</h4>
+<a href="/features/">Features</a><a href="/download/">Download</a><a href="/changelog/">Changelog</a><a href="https://github.com/HamimTalukder/GrabClip-Windows/releases">GitHub releases</a></div>
+<div><h4>Resources</h4>
+<a href="/help/">Help Center</a><a href="/faq/">FAQ</a><a href="/privacy/">Privacy</a><a href="/license/">Licence and credits</a></div>
+<div><h4>The developer</h4>
+<a href="/about/">About</a><a href="https://github.com/HamimTalukder" data-contact="github">GitHub</a><a href="https://www.facebook.com/hamim.talukder.soton" data-contact="facebook">Facebook</a><a href="/about/#support">Support GrabClip</a></div>
+</div>
+<div class="fine">
+<p>Download content you have the right to save, and respect copyright and the terms of the source websites.</p>
+<p>GrabClip is an independent project and is not affiliated with YouTube, Facebook, Instagram or TikTok. &copy; <span data-year>2026</span></p>
+</div>
+</div>
+<div class="wordmark rv" aria-hidden="true">GrabClip</div>
+</footer>
+</body>
+</html>
