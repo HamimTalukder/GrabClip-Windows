@@ -15,22 +15,72 @@
   // -------------------------------------------------------
 
   function all(sel, from) { return Array.prototype.slice.call((from || document).querySelectorAll(sel)); }
+  var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // Latest version and installer name, from our own /api/release (it reads GitHub)
-  var verEls = all('[data-version]');
-  var fileEls = all('[data-file]');
-  if (verEls.length || fileEls.length) {
-    fetch('/api/release')
-      .then(function (r) { return r.ok ? r.json() : null; })
-      .then(function (j) {
-        if (!j || !j.version) return;
-        verEls.forEach(function (e) { e.textContent = j.version; });
-        fileEls.forEach(function (e) { e.textContent = e.getAttribute('data-file').replace('{file}', j.file); });
-      })
-      .catch(function () {});
+  // ---- Latest release: read from GitHub in the visitor's browser (no server needed) ----
+  var RELEASES_URL = CONTACT.repo + '/releases/latest';
+  var release = null;
+  var releaseReq = null;
+
+  function loadRelease() {
+    if (releaseReq) return releaseReq;
+    releaseReq = new Promise(function (resolve) {
+      try {
+        var c = JSON.parse(localStorage.getItem('gc-release'));
+        if (c && c.url && Date.now() - c.t < 1800000) { release = c; resolve(c); return; }
+      } catch (e) {}
+      fetch('https://api.github.com/repos/' + CONTACT.repo.replace('https://github.com/', '') + '/releases/latest',
+        { headers: { Accept: 'application/vnd.github+json' } })
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (j) {
+          var a = j && (j.assets || []).filter(function (x) { return /-setup\.exe$/i.test(x.name); })[0];
+          if (!a) { resolve(null); return; }
+          release = { t: Date.now(), version: String(j.tag_name).replace(/^v/i, ''), file: a.name, url: a.browser_download_url };
+          try { localStorage.setItem('gc-release', JSON.stringify(release)); } catch (e) {}
+          resolve(release);
+        })
+        .catch(function () { resolve(null); });
+    });
+    return releaseReq;
   }
 
-  // Tabs (How it works)
+  // Small message at the bottom of the screen
+  var toastEl, toastTimer;
+  function toast(msg) {
+    if (!toastEl) {
+      toastEl = document.createElement('div');
+      toastEl.className = 'toast';
+      toastEl.setAttribute('role', 'status');
+      document.body.appendChild(toastEl);
+    }
+    toastEl.textContent = msg;
+    toastEl.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { toastEl.classList.remove('show'); }, 4500);
+  }
+
+  // Download buttons start the installer download right here, no new tab
+  function startDownload(rel) {
+    var ok = rel && /^https:\/\/github\.com\//.test(rel.url);
+    toast(ok ? 'Your download is starting...' : 'Opening GitHub Releases...');
+    window.location.assign(ok ? rel.url : RELEASES_URL);
+  }
+  all('[data-download]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      if (e.button || e.ctrlKey || e.metaKey || e.shiftKey) return;   // "open in new tab" stays a normal link
+      e.preventDefault();
+      if (release) startDownload(release); else loadRelease().then(startDownload);
+    });
+  });
+
+  // Show the live version and installer name
+  loadRelease().then(function (rel) {
+    if (!rel) return;
+    all('[data-version]').forEach(function (e) { e.textContent = rel.version; });
+    all('[data-file]').forEach(function (e) { e.textContent = e.getAttribute('data-file').replace('{file}', rel.file); });
+  });
+
+  // ---- Tabs (How it works) ----
   all('[data-tabs]').forEach(function (box) {
     var tabs = all('[role=tab]', box);
     var panels = all('[role=tabpanel]', box);
@@ -53,7 +103,7 @@
     });
   });
 
-  // Search + category filter (Help Center and FAQ)
+  // ---- Search + category filter (Help Center and FAQ) ----
   all('[data-filter]').forEach(function (box) {
     var input = box.querySelector('[data-q]');
     var buttons = all('[data-set]', box);
@@ -95,7 +145,7 @@
   openFromHash();
   window.addEventListener('hashchange', openFromHash);
 
-  // Copy buttons
+  // ---- Copy buttons ----
   function copyText(btn, text) {
     function done() {
       btn.setAttribute('data-done', '');
@@ -111,7 +161,7 @@
     });
   });
 
-  // Contact buttons. The e-mail address is never printed on the page.
+  // ---- Contact buttons. The e-mail address is never printed on the page. ----
   var links = {
     email: CONTACT.email && 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(CONTACT.email) + '&su=' + encodeURIComponent('GrabClip'),
     discord: CONTACT.discordId && 'https://discord.com/users/' + encodeURIComponent(CONTACT.discordId),
@@ -126,15 +176,86 @@
   });
   all('[data-discord-name]').forEach(function (e) { e.textContent = CONTACT.discordName; });
 
-  // bKash box
+  // ---- bKash box ----
   var box = document.querySelector('[data-bkash-box]');
-  if (box) {
-    if (BKASH) {
-      all('[data-bkash]', box).forEach(function (e) { e.textContent = BKASH; });
-      all('[data-bkash-copy]', box).forEach(function (e) { e.setAttribute('data-copy', BKASH); });
-      box.hidden = false;
-    }
+  if (box && BKASH) {
+    all('[data-bkash]', box).forEach(function (e) { e.textContent = BKASH; });
+    all('[data-bkash-copy]', box).forEach(function (e) { e.setAttribute('data-copy', BKASH); });
+    box.hidden = false;
   }
 
   all('[data-year]').forEach(function (e) { e.textContent = new Date().getFullYear(); });
+
+  // ---- Draggable chips: pick one up and it lifts and glows, let go and it springs back ----
+  all('[data-drag]').forEach(function (el) {
+    var id = null, x0 = 0, y0 = 0, lastX = 0, tilt = 0, calm;
+    el.addEventListener('pointerdown', function (e) {
+      if (e.button) return;
+      id = e.pointerId; x0 = e.clientX; y0 = e.clientY; lastX = e.clientX; tilt = 0;
+      el.setPointerCapture(id);
+      el.classList.add('is-drag');
+    });
+    el.addEventListener('pointermove', function (e) {
+      if (e.pointerId !== id) return;
+      tilt = tilt * 0.7 + Math.max(-16, Math.min(16, (e.clientX - lastX) * 1.4)) * 0.3;
+      lastX = e.clientX;
+      el.style.setProperty('--dx', (e.clientX - x0) + 'px');
+      el.style.setProperty('--dy', (e.clientY - y0) + 'px');
+      el.style.setProperty('--rot', tilt.toFixed(1) + 'deg');
+      clearTimeout(calm);
+      calm = setTimeout(function () { el.style.setProperty('--rot', '0deg'); tilt = 0; }, 90);
+    });
+    function drop(e) {
+      if (e.pointerId !== id) return;
+      id = null;
+      clearTimeout(calm);
+      el.classList.remove('is-drag');
+      el.style.setProperty('--dx', '0px');
+      el.style.setProperty('--dy', '0px');
+      el.style.setProperty('--rot', '0deg');
+    }
+    el.addEventListener('pointerup', drop);
+    el.addEventListener('pointercancel', drop);
+  });
+
+  // ---- Light that follows the pointer on chips, buttons and cards ----
+  var FX = '.chip,.tags span,.filter button,.cat-nav a,.link-btn,.btn,.copy,.pill-nav a,.src,.tile,.bn,.art,.step-art,.privacy,.dl-card,.latest,.made';
+  document.addEventListener('pointermove', function (e) {
+    var t = e.target.closest && e.target.closest(FX);
+    if (!t) return;
+    var r = t.getBoundingClientRect();
+    t.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+    t.style.setProperty('--my', (e.clientY - r.top) + 'px');
+  }, { passive: true });
+
+  // ---- Reveal on scroll, and numbers that count up ----
+  function countUp(el) {
+    var end = parseInt(el.getAttribute('data-count'), 10), t0 = null;
+    function step(t) {
+      if (t0 === null) t0 = t;
+      var p = Math.min((t - t0) / 1100, 1);
+      el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3)));
+      if (p < 1) requestAnimationFrame(step);
+    }
+    el.textContent = '0';
+    requestAnimationFrame(step);
+  }
+  if ('IntersectionObserver' in window && !reduced) {
+    document.documentElement.classList.add('js');
+    all('[data-stagger]').forEach(function (p) {
+      Array.prototype.forEach.call(p.children, function (c, i) { c.classList.add('rv'); c.style.setProperty('--i', i % 4); });
+    });
+    all('.tags').forEach(function (p) {
+      all('span', p).forEach(function (c, i) { c.classList.add('rv'); c.style.setProperty('--i', i); });
+    });
+    var io = new IntersectionObserver(function (list) {
+      list.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        io.unobserve(en.target);
+        en.target.classList.add('in');
+        if (en.target.hasAttribute('data-count')) countUp(en.target);
+      });
+    }, { threshold: 0.12 });
+    all('.rv, [data-count]').forEach(function (el) { io.observe(el); });
+  }
 })();

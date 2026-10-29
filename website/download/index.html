@@ -32,7 +32,7 @@
 <nav class="pill-nav" aria-label="Main"><a href="/features/">Features</a><a href="/#how">How it works</a><a href="/help/">Help</a><a href="/changelog/">Changelog</a></nav>
 <div class="bar-end">
 <a class="gh" href="https://github.com/HamimTalukder/GrabClip-Windows"><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-github"/></svg><span>GitHub</span></a>
-<a class="btn btn-mint btn-sm" href="/download/latest"><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-download"/></svg>Download</a>
+<a class="btn btn-mint btn-sm" href="https://github.com/HamimTalukder/GrabClip-Windows/releases/latest" data-download><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-download"/></svg>Download</a>
 </div>
 </div>
 </header>
@@ -40,21 +40,21 @@
 <section class="page-hero">
   <div class="wrap">
     <h1 class="display"><span>Ready to bring your</span><span>downloads together?</span></h1>
-    <p class="lead">GrabClip is a Windows desktop app for downloading, organizing and playing supported video and audio content.</p>
+    <p class="lead">One installer for Windows 10 and 11. Free for personal use.</p>
   </div>
 </section>
 
 <div class="wrap">
-  <div class="dl-card">
+  <div class="dl-card rv">
     <div>
       <h2 class="h2">GrabClip <span data-version>1.0.1</span> for Windows</h2>
-      <div class="actions"><a class="btn btn-mint" href="/download/latest"><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-download"/></svg>Download latest release</a></div>
+      <div class="actions"><a class="btn btn-mint" href="https://github.com/HamimTalukder/GrabClip-Windows/releases/latest" data-download><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-download"/></svg>Download latest release</a></div>
       <p class="file" data-file="{file}">GrabClip_1.0.1_x64-setup.exe</p>
-      <p class="small">The installer comes straight from the official GitHub release, and the download starts right here. <a href="https://github.com/HamimTalukder/GrabClip-Windows/releases">Browse all releases</a></p>
+      <p class="small">Straight from the official GitHub release. <a href="https://github.com/HamimTalukder/GrabClip-Windows/releases">All releases</a></p>
     </div>
     <div class="facts">
-      <div><b>Windows 10 and 11</b><span>64-bit. Installs for your user only, so no admin password is needed.</span></div>
-      <div><b>No extra runtime setup</b><span>The download engine is bundled. You do not need Python or a terminal.</span></div>
+      <div><b>Windows 10 and 11</b><span>64-bit. No admin password needed.</span></div>
+      <div><b>Nothing else to install</b><span>The download engine is bundled. No Python, no terminal.</span></div>
       <div><b>Free for personal use</b><span>See the <a href="/license/" class="muted">licence</a> for the applicable terms.</span></div>
     </div>
   </div>
@@ -64,10 +64,10 @@
   <div class="wrap split">
     <div>
       <h2 class="h2">Up and running in a few steps.</h2>
-      <p class="lead">Installing takes a minute. Nothing else has to be set up first.</p>
+      <p class="lead">Installing takes a minute.</p>
     </div>
     <ol class="steps">
-      <li>Press <b>Download latest release</b>. The installer comes from the newest GitHub release.<br><span>Prefer to do it by hand? Open the latest release and download the <code>GrabClip_&lt;version&gt;_x64-setup.exe</code> file under Assets. You do not need the <code>.sig</code> and <code>latest.json</code> files, the app uses them for updates.</span></li>
+      <li>Press <b>Download latest release</b>.<br><span>Prefer to do it by hand? Take <code>GrabClip_&lt;version&gt;_x64-setup.exe</code> from the release Assets. Skip the <code>.sig</code> and <code>latest.json</code> files, the app uses them for updates.</span></li>
       <li>Run the installer and complete the setup.</li>
       <li>Open GrabClip from the Windows Start menu.</li>
       <li>Press <b>Add download</b>, paste a link and press <b>Analyze link</b>.</li>
@@ -79,17 +79,16 @@
   <div class="wrap split">
     <div>
       <h2 class="h2">Why is Windows asking whether to run this app?</h2>
-      <p class="lead">The current installer is not signed with a paid Windows code-signing certificate, so Microsoft Defender SmartScreen may show a blue "Windows protected your PC" screen.</p>
-      <p class="lead">That warning is about the missing certificate. It does not prove that an installer is either malicious or harmless.</p>
+      <p class="lead">The installer is not signed with a paid Windows certificate, so SmartScreen may show a blue "Windows protected your PC" screen. That warning is about the missing certificate. It does not prove a file is harmful or harmless.</p>
     </div>
     <div class="prose">
       <h3>Check the file before you run it</h3>
-      <p>Download GrabClip only from the official GitHub release, which is where the button on this page takes you. Compare the installer's SHA-256 hash with the value shown next to the file on the release page.</p>
+      <p>Download only from the official GitHub release, which is where the button takes you. Compare the installer's SHA-256 hash with the one on the release page.</p>
       <div class="code"><code id="hash-cmd" data-file="Get-FileHash .\{file} -Algorithm SHA256">Get-FileHash .\GrabClip_1.0.1_x64-setup.exe -Algorithm SHA256</code><button type="button" class="copy" data-copy-from="#hash-cmd"><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-copy"/></svg>Copy</button></div>
-      <p>Run that command in PowerShell from the folder that holds the installer. If the two hashes match, click <b>More info</b>, then <b>Run anyway</b>.</p>
+      <p>Run it in PowerShell from the installer's folder. If the hashes match, click <b>More info</b>, then <b>Run anyway</b>.</p>
       <div class="note"><b>If you cannot verify the file</b>, or you are unsure about a security warning, don't continue.</div>
       <h3>Antivirus warnings</h3>
-      <p>Some antivirus programs flag the installer because yt-dlp and FFmpeg are inside it. Do not assume every alert is harmless. Check the hash against the official release, and look into any detection you cannot explain.</p>
+      <p>Some antivirus programs flag the installer because yt-dlp and FFmpeg are inside it. Check the hash, and look into any detection you cannot explain.</p>
     </div>
   </div>
 </section>
@@ -100,8 +99,8 @@
       <h2 class="h2">Already using GrabClip?</h2>
     </div>
     <div class="prose">
-      <p>Check for updates from <b>Settings, Updates</b>. GrabClip also looks for a new version by itself when it starts. If a website stops working, try <b>Update yt-dlp</b> first. Browse the <a href="/changelog/">changelog</a> to see what changed in each release.</p>
-      <p>To uninstall, open Windows Settings, then Apps, and remove GrabClip. Your downloaded videos are never touched.</p>
+      <p>Check <b>Settings, Updates</b>. If a website stops working, try <b>Update yt-dlp</b> first. See the <a href="/changelog/">changelog</a> for what changed.</p>
+      <p>To uninstall, open Windows Settings, then Apps. Your downloaded videos are never touched.</p>
       <div class="links">
         <a class="link-btn" href="https://github.com/HamimTalukder/GrabClip-Windows/releases"><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-github"/></svg>All releases</a>
         <a class="link-btn" href="https://github.com/HamimTalukder/GrabClip-Windows/issues/new/choose"><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-bug"/></svg>Report an issue</a>
@@ -112,9 +111,14 @@
 </main>
 <footer class="foot">
 <div class="wrap">
+<div class="made rv">
+<svg class="ic spark s1" aria-hidden="true"><use href="/assets/icons.svg#i-sparkle"/></svg><svg class="ic spark s2" aria-hidden="true"><use href="/assets/icons.svg#i-sparkle"/></svg><svg class="ic spark s3" aria-hidden="true"><use href="/assets/icons.svg#i-sparkle"/></svg>
+<p class="made-t">Made with <em>curiosity</em></p>
+<p class="made-by">by <a href="/about/">Hamim Talukder Soton</a></p>
+</div>
 <div class="foot-grid">
 <div>
-<a class="brand" href="/" aria-label="GrabClip home"><img src="/assets/logo-icon.svg" alt="" width="30" height="30"><img src="/assets/logo-text.svg" alt="" width="88" height="20"></a>
+<a class="brand" href="/" aria-label="GrabClip home"><img src="/assets/logo-icon.svg" alt="" width="56" height="56"><img src="/assets/logo-text.svg" alt="" width="158" height="36"></a>
 <p class="foot-note">From link to library. Without the busywork.</p>
 </div>
 <div><h4>Product</h4>
@@ -125,7 +129,7 @@
 <a href="/about/">About</a><a href="https://github.com/HamimTalukder" data-contact="github">GitHub</a><a href="https://www.facebook.com/hamim.talukder.soton" data-contact="facebook">Facebook</a><a href="/about/#support">Support GrabClip</a></div>
 </div>
 <div class="fine">
-<p>Made with curiosity by Hamim Talukder Soton. Download content you have the right to save, and respect copyright and the terms of the source websites.</p>
+<p>Download content you have the right to save, and respect copyright and the terms of the source websites.</p>
 <p>GrabClip is an independent project and is not affiliated with YouTube, Facebook, Instagram or TikTok. &copy; <span data-year>2026</span></p>
 </div>
 </div>

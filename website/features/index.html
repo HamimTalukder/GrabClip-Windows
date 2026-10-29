@@ -32,7 +32,7 @@
 <nav class="pill-nav" aria-label="Main"><a href="/features/" aria-current="page">Features</a><a href="/#how">How it works</a><a href="/help/">Help</a><a href="/changelog/">Changelog</a></nav>
 <div class="bar-end">
 <a class="gh" href="https://github.com/HamimTalukder/GrabClip-Windows"><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-github"/></svg><span>GitHub</span></a>
-<a class="btn btn-mint btn-sm" href="/download/latest"><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-download"/></svg>Download</a>
+<a class="btn btn-mint btn-sm" href="https://github.com/HamimTalukder/GrabClip-Windows/releases/latest" data-download><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-download"/></svg>Download</a>
 </div>
 </div>
 </header>
@@ -53,10 +53,10 @@
 </section>
 
 <div class="wrap">
-  <section class="cat" id="download">
+  <section class="cat" data-stagger id="download">
     <div>
       <h2 class="h2">More control over every download.</h2>
-      <p class="lead">Start with a link. Choose exactly what you want to keep. GrabClip gives you control over the content, quality, format and details before the download begins.</p>
+      <p class="lead">Pick exactly what you keep, before the download starts.</p>
       <dl class="spec">
         <dt>Link analysis</dt><dd>Preview the title, source, duration and estimated file size before you download.</dd>
         <dt>Multiple sources</dt><dd>Download from YouTube, Facebook, Instagram, TikTok and other supported sites. Availability can vary by site.</dd>
@@ -77,10 +77,10 @@
     </div>
   </section>
 
-  <section class="cat" id="queue">
+  <section class="cat" data-stagger id="queue">
     <div>
       <h2 class="h2">More downloads. Less babysitting.</h2>
-      <p class="lead">Keep downloads moving without having to manage every step by hand.</p>
+      <p class="lead">Keep downloads moving without babysitting them.</p>
       <dl class="spec">
         <dt>Automatic queue</dt><dd>Let the next download begin when the current one finishes.</dd>
         <dt>Pause and resume</dt><dd>Continue an interrupted download without starting over when the saved partial file can be reused.</dd>
@@ -104,10 +104,10 @@
     </div>
   </section>
 
-  <section class="cat" id="library">
+  <section class="cat" data-stagger id="library">
     <div>
       <h2 class="h2">Every file has somewhere to go.</h2>
-      <p class="lead">Downloads shouldn't disappear into a folder you'll never open again. Find files, organize courses and continue playback from one place.</p>
+      <p class="lead">Find files, organize courses and pick up playback in one place.</p>
       <dl class="spec">
         <dt>Library management</dt><dd>Browse Downloads, Queue, History and Library with search, sorting, filters and bulk actions.</dd>
         <dt>Organized courses</dt><dd>Keep lessons in folders with watched marks.</dd>
@@ -124,10 +124,10 @@
     </div>
   </section>
 
-  <section class="cat" id="phone">
+  <section class="cat" data-stagger id="phone">
     <div>
       <h2 class="h2">Your local library, a little more flexible.</h2>
-      <p class="lead">Use GrabClip's QR code to open a saved video on your phone over the same Wi-Fi network. Your phone and PC both need to be on that network, and Windows Firewall may ask you to allow GrabClip.</p>
+      <p class="lead">Scan a QR code and watch a saved video on your phone. Same Wi-Fi only.</p>
       <ul class="expect">
         <li><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-phone"/></svg><span>Works on the same Wi-Fi only. It is not a way to share files over the internet.</span></li>
         <li><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-lock"/></svg><span>The link is private to that one file and stops working after 10 minutes, or when you press Stop sharing.</span></li>
@@ -144,7 +144,7 @@
   <div class="wrap">
     <div class="sec-head">
       <h2 class="h2">The essentials, already built in.</h2>
-      <p class="lead">Keep the app maintained without hunting for separate tools. GrabClip includes update checks, a yt-dlp update option, a guided cookie setup in Bangla or English, Windows notifications, a system tray icon and help options. Its icons and fonts are bundled, so the interface looks right even offline.</p>
+      <p class="lead">Updates, cookie setup, notifications and help, all built in.</p>
       <div class="tags"><span>Automatic updates</span><span>Cookie health checks</span><span>Bangla and English guide</span><span>Windows tray</span><span>In-app help</span></div>
     </div>
     <div class="bento">
@@ -161,7 +161,7 @@
   <div class="wrap split">
     <div>
       <h2 class="h2">Know what to expect.</h2>
-      <p class="lead">We would rather you know the limits before you install than find them out afterwards.</p>
+      <p class="lead">The limits, before you install.</p>
     </div>
     <ul class="expect">
       <li><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-info"/></svg><span>Designed for Windows 10 and Windows 11, 64-bit.</span></li>
@@ -176,9 +176,9 @@
 <section class="cta">
   <div class="wrap">
     <h2 class="h2">Give your links a better place to go.</h2>
-    <p class="lead">Download GrabClip for Windows and bring downloading, course organization and local playback together in one desktop app.</p>
+    <p class="lead">One installer. No account. No admin password.</p>
     <div class="actions">
-      <a class="btn btn-mint" href="/download/latest"><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-download"/></svg>Download GrabClip</a>
+      <a class="btn btn-mint" href="https://github.com/HamimTalukder/GrabClip-Windows/releases/latest" data-download><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-download"/></svg>Download GrabClip</a>
       <a class="btn btn-ghost" href="/download/">Read the installation guide</a>
     </div>
     <small>Windows 10 or 11, 64-bit. Free for personal use.</small>
@@ -187,9 +187,14 @@
 </main>
 <footer class="foot">
 <div class="wrap">
+<div class="made rv">
+<svg class="ic spark s1" aria-hidden="true"><use href="/assets/icons.svg#i-sparkle"/></svg><svg class="ic spark s2" aria-hidden="true"><use href="/assets/icons.svg#i-sparkle"/></svg><svg class="ic spark s3" aria-hidden="true"><use href="/assets/icons.svg#i-sparkle"/></svg>
+<p class="made-t">Made with <em>curiosity</em></p>
+<p class="made-by">by <a href="/about/">Hamim Talukder Soton</a></p>
+</div>
 <div class="foot-grid">
 <div>
-<a class="brand" href="/" aria-label="GrabClip home"><img src="/assets/logo-icon.svg" alt="" width="30" height="30"><img src="/assets/logo-text.svg" alt="" width="88" height="20"></a>
+<a class="brand" href="/" aria-label="GrabClip home"><img src="/assets/logo-icon.svg" alt="" width="56" height="56"><img src="/assets/logo-text.svg" alt="" width="158" height="36"></a>
 <p class="foot-note">From link to library. Without the busywork.</p>
 </div>
 <div><h4>Product</h4>
@@ -200,7 +205,7 @@
 <a href="/about/">About</a><a href="https://github.com/HamimTalukder" data-contact="github">GitHub</a><a href="https://www.facebook.com/hamim.talukder.soton" data-contact="facebook">Facebook</a><a href="/about/#support">Support GrabClip</a></div>
 </div>
 <div class="fine">
-<p>Made with curiosity by Hamim Talukder Soton. Download content you have the right to save, and respect copyright and the terms of the source websites.</p>
+<p>Download content you have the right to save, and respect copyright and the terms of the source websites.</p>
 <p>GrabClip is an independent project and is not affiliated with YouTube, Facebook, Instagram or TikTok. &copy; <span data-year>2026</span></p>
 </div>
 </div>

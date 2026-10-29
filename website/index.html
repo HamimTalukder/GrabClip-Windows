@@ -33,7 +33,7 @@
 <nav class="pill-nav" aria-label="Main"><a href="/features/">Features</a><a href="/#how">How it works</a><a href="/help/">Help</a><a href="/changelog/">Changelog</a></nav>
 <div class="bar-end">
 <a class="gh" href="https://github.com/HamimTalukder/GrabClip-Windows"><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-github"/></svg><span>GitHub</span></a>
-<a class="btn btn-mint btn-sm" href="/download/latest"><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-download"/></svg>Download</a>
+<a class="btn btn-mint btn-sm" href="https://github.com/HamimTalukder/GrabClip-Windows/releases/latest" data-download><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-download"/></svg>Download</a>
 </div>
 </div>
 </header>
@@ -46,151 +46,140 @@
       <span class="chip"><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-check"/></svg>Free for personal use</span>
     </div>
     <h1 class="display"><span>From link to library.</span><span>Without the busywork.</span></h1>
-    <p class="lead">GrabClip is a Windows video downloader for videos, reels, playlists and course lessons. Choose your quality, control your queue, and keep everything organized in one desktop app.</p>
+    <p class="lead">Download videos, playlists and course lessons on Windows. Pick the quality, queue it, keep it organized.</p>
     <div class="actions">
-      <a class="btn btn-mint" href="/download/latest"><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-download"/></svg>Download for Windows</a>
+      <a class="btn btn-mint" href="https://github.com/HamimTalukder/GrabClip-Windows/releases/latest" data-download><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-download"/></svg>Download for Windows</a>
       <a class="btn btn-ghost" href="/features/">Explore features</a>
     </div>
-    <p class="hero-note">No separate Python setup. No terminal workflow. Just a desktop app. Version <b data-version>1.0.1</b> installs for your user, with no admin password. <a href="/download/#smartscreen">Seeing a Windows warning?</a></p>
+    <p class="hero-note">No Python, no terminal, no admin password. <a href="/download/#smartscreen">Seeing a Windows warning?</a></p>
   </div>
   <div class="wrap stage">
     <div class="beam" aria-hidden="true"></div>
     <div class="win"><img src="/assets/shots/downloads.webp" width="1920" height="1080" alt="The GrabClip Downloads page: a course downloading lesson by lesson with progress bars, a speed gauge and a night scheduler card" fetchpriority="high"></div>
-    <div class="float f1"><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-play"/></svg><div><b>Video</b> <span>1080p, MP4</span></div></div>
-    <div class="float f2"><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-list"/></svg><div><b>Queue</b> <span>Pause and resume</span></div></div>
-    <div class="float f3"><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-folder"/></svg><div><b>Library</b> <span>Ready to watch</span></div></div>
+    <div class="float f1" data-drag><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-play"/></svg><div><b>Video</b> <span>1080p, MP4</span></div></div>
+    <div class="float f2" data-drag><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-list"/></svg><div><b>Queue</b> <span>Pause and resume</span></div></div>
+    <div class="float f4" data-drag><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-cap"/></svg><div><b>Study mode</b> <span>Speed limit</span></div></div>
+    <div class="float f3" data-drag><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-folder"/></svg><div><b>Library</b> <span>Ready to watch</span></div></div>
   </div>
 </section>
 
 <div class="sources">
   <div class="wrap">
-    <p>Works with the sites you already use. Availability can vary by site.</p>
-    <b>YouTube</b><b>Facebook</b><b>Instagram</b><b>TikTok</b><b>and many more</b>
+    <p>Works with the sites you already use</p>
+    <span class="src" data-drag><i><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-play"/></svg></i>YouTube</span>
+    <span class="src" data-drag><i><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-users"/></svg></i>Facebook</span>
+    <span class="src" data-drag><i><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-camera"/></svg></i>Instagram</span>
+    <span class="src" data-drag><i><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-music"/></svg></i>TikTok</span>
+    <span class="src" data-drag><i><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-sparkle"/></svg></i>and many more</span>
+    <small>Availability can vary by site.</small>
   </div>
 </div>
 
+<section class="stats">
+  <div class="wrap" data-stagger>
+    <div class="stat"><b><span data-count="3">3</span></b><span>steps to a download</span></div>
+    <div class="stat"><b><span data-count="8">8</span></b><span>quality levels, 144p to 4K</span></div>
+    <div class="stat"><b><span data-count="5">5</span></b><span>audio formats</span></div>
+    <div class="stat"><b><span data-count="50">50</span></b><span>links in one paste</span></div>
+  </div>
+</section>
+
 <section class="sec" id="how">
   <div class="wrap" data-tabs>
-    <div class="sec-head center">
+    <div class="sec-head center rv">
       <span class="label">How it works</span>
-      <h2 class="h2">Three steps. One less thing to worry about.</h2>
-      <p class="lead">No command-line rituals. No juggling separate tools. Take a link, choose what matters, and let GrabClip handle the rest.</p>
+      <h2 class="h2">Three steps. That's it.</h2>
+      <p class="lead">Paste a link, pick what you want, watch it from your Library.</p>
     </div>
-    <div class="steps-bar" role="tablist" aria-label="How GrabClip works">
+    <div class="steps-bar rv" role="tablist" aria-label="How GrabClip works">
       <button type="button" role="tab" id="tab-1" aria-controls="panel-1" aria-selected="true"><span class="n">1</span>Bring a link</button>
       <button type="button" role="tab" id="tab-2" aria-controls="panel-2" aria-selected="false" tabindex="-1"><span class="n">2</span>Make it yours</button>
       <button type="button" role="tab" id="tab-3" aria-controls="panel-3" aria-selected="false" tabindex="-1"><span class="n">3</span>Keep it organized</button>
     </div>
     <div class="steps-line" aria-hidden="true"><i></i></div>
     <div class="step-panel" role="tabpanel" id="panel-1" aria-labelledby="tab-1">
-      <div><h3>Bring a link</h3><p class="lead">Paste a video or playlist URL. Preview the title, source, duration and estimated file size before downloading.</p></div>
+      <div><h3>Bring a link</h3><p class="lead">Paste a video or playlist URL and preview it before you download.</p></div>
       <div class="step-art"><img src="/assets/shots/add-1-link.webp" width="850" height="434" alt="Add download, step 1: choose a source tab and paste a playlist link" loading="lazy" decoding="async"></div>
     </div>
     <div class="step-panel" role="tabpanel" id="panel-2" aria-labelledby="tab-2" hidden>
-      <div><h3>Make it yours</h3><p class="lead">Pick video or audio, choose quality and format, add subtitles or select a specific time range.</p></div>
+      <div><h3>Make it yours</h3><p class="lead">Video or audio, any quality, subtitles, or just a time range.</p></div>
       <div class="step-art"><img src="/assets/shots/add-2-format.webp" width="850" height="731" alt="Add download, step 2: course folder, content type, quality and format" loading="lazy" decoding="async"></div>
     </div>
     <div class="step-panel" role="tabpanel" id="panel-3" aria-labelledby="tab-3" hidden>
-      <div><h3>Keep it organized</h3><p class="lead">Find finished downloads in the Library, resume playback, organize course lessons and search subtitles where available.</p></div>
+      <div><h3>Keep it organized</h3><p class="lead">Everything lands in your Library. Resume playback and track course lessons.</p></div>
       <div class="step-art"><img src="/assets/shots/library.webp" width="1600" height="900" alt="The GrabClip Library with a course folder, numbered lessons and a preview panel" loading="lazy" decoding="async"></div>
     </div>
   </div>
 </section>
 
-<section class="sec">
-  <div class="wrap split">
-    <div>
-      <h2 class="h2">Know what you're downloading before it starts.</h2>
-      <p class="lead">GrabClip previews the content first, then lets you choose what to save. Pick a video quality, extract audio, include subtitles, or grab only the segment you actually need.</p>
-      <dl class="spec">
-        <dt>Content</dt><dd>Video and audio, video only, or audio only</dd>
-        <dt>Quality</dt><dd>Best, 4K, 1440p, 1080p, 720p, 480p, 360p or 144p where available</dd>
-        <dt>Audio</dt><dd>Best, MP3, AAC, OPUS or FLAC</dd>
-        <dt>Extras</dt><dd>English or Bangla subtitles, thumbnail and metadata, fast download</dd>
-        <dt>Part of a video</dt><dd>Save a time range instead of the whole file</dd>
-      </dl>
+<section class="sec" id="standout">
+  <div class="wrap">
+    <div class="sec-head center rv">
+      <span class="label">Standout features</span>
+      <h2 class="h2">Built for how you actually watch.</h2>
     </div>
-    <div class="art art-narrow"><img src="/assets/shots/add-3-extras.webp" width="850" height="538" alt="Add download, step 3: subtitles, thumbnail and metadata, and fast download switches" loading="lazy" decoding="async"></div>
-  </div>
-</section>
-
-<section class="sec">
-  <div class="wrap split flip">
-    <div>
-      <h2 class="h2">Your downloads don't need your constant attention.</h2>
-      <p class="lead">Queue multiple links, pause or resume interrupted downloads, and let the next item start automatically. Schedule downloads for later, limit your speed while you're studying, or set what happens when the queue finishes.</p>
-      <ol class="flow">
-        <li><b>Schedule</b><span>Pick a start time, for example 02:00.</span></li>
-        <li><b>Download</b><span>The queue runs by itself. Cap the speed to keep the rest of your internet usable.</span></li>
-        <li><b>Finish</b><span>Do nothing, sleep or shut down. Keep GrabClip open while the schedule waits.</span></li>
-      </ol>
-      <div class="tags"><span>Pause and resume</span><span>Night scheduler</span><span>Study mode</span><span>Automatic retry</span></div>
+    <div class="bn-grid" data-stagger>
+      <article class="bn a hot">
+        <span class="bn-ic"><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-qr"/></svg></span>
+        <h3>Scan. Watch on your phone.</h3>
+        <p>Open any saved video on your phone with a QR code. Same Wi-Fi, no cables, no cloud.</p>
+        <div class="bn-art narrow"><img src="/assets/shots/send-to-phone.webp" width="670" height="766" alt="Send to phone dialog with a QR code and a link" loading="lazy" decoding="async"></div>
+      </article>
+      <article class="bn b">
+        <span class="bn-ic"><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-list"/></svg></span>
+        <h3>Playlists become courses.</h3>
+        <p>Numbered lessons, watched marks, and a one-click check for new ones.</p>
+        <div class="bn-art crop"><img src="/assets/shots/library.webp" width="1600" height="900" alt="The GrabClip Library: a course folder with numbered lessons and a preview panel" loading="lazy" decoding="async"></div>
+      </article>
+      <article class="bn">
+        <span class="bn-ic"><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-search"/></svg></span>
+        <h3>Search inside videos.</h3>
+        <p>Type a spoken phrase and jump to that moment. Works with subtitles.</p>
+      </article>
+      <article class="bn">
+        <span class="bn-ic"><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-moon"/></svg></span>
+        <h3>Download while you sleep.</h3>
+        <p>Schedule a start time, then sleep or shut down when it's done.</p>
+      </article>
+      <article class="bn">
+        <span class="bn-ic"><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-cap"/></svg></span>
+        <h3>Study mode.</h3>
+        <p>Cap your speed so the rest of your internet stays usable.</p>
+      </article>
+      <article class="bn">
+        <span class="bn-ic"><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-cut"/></svg></span>
+        <h3>Just the part you need.</h3>
+        <p>Save a time range instead of the whole video.</p>
+      </article>
+      <article class="bn">
+        <span class="bn-ic"><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-cookie"/></svg></span>
+        <h3>Cookie health checks.</h3>
+        <p>See how many login days are left, site by site.</p>
+      </article>
+      <article class="bn">
+        <span class="bn-ic"><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-refresh"/></svg></span>
+        <h3>Fix sites in one click.</h3>
+        <p>A site stopped working? Update yt-dlp from Settings. No reinstall.</p>
+      </article>
     </div>
-    <div class="art art-narrow"><img src="/assets/shots/scheduler.webp" width="670" height="605" alt="The Night scheduler dialog: start time, what to do when finished and a speed limit" loading="lazy" decoding="async"></div>
+    <p class="center-link"><a href="/features/">See every feature</a></p>
   </div>
 </section>
 
 <section class="sec">
   <div class="wrap">
-    <div class="sec-head">
-      <h2 class="h2">A playlist isn't just a pile of videos.</h2>
-      <p class="lead">Turn a playlist into an ordered course folder. Keep lessons numbered, track what you've watched, and check for new lessons without downloading everything again.</p>
-    </div>
-    <div class="win wide-art"><img src="/assets/shots/library.webp" width="1600" height="900" alt="The GrabClip Library: a course folder with numbered lessons, a preview panel and actions for each lesson" loading="lazy" decoding="async"></div>
-    <div class="trio">
-      <div><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-list"/></svg><b>Numbered lessons</b><p>Lessons are saved as 01, 02, 03 and so on, in one course folder.</p></div>
-      <div><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-check"/></svg><b>Watched marks</b><p>See what you have finished, with progress for each course.</p></div>
-      <div><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-refresh"/></svg><b>Check for new lessons</b><p>Add only what is new, without downloading everything again.</p></div>
-    </div>
-    <p class="center-link"><a href="/help/#course-download">Explore course mode</a></p>
-  </div>
-</section>
-
-<section class="sec">
-  <div class="wrap split">
-    <div>
-      <h2 class="h2">Finish downloading. Start using what you saved.</h2>
-      <p class="lead">Pick up where you left off, adjust playback speed, add timestamped notes, move through lessons, or find a spoken phrase in videos that have subtitles.</p>
-      <p class="lead">Found it once, find it again: search your local Library, filter your downloads, and jump to the moment through the subtitles that are available.</p>
-      <div class="tags"><span>Resume playback</span><span>1x to 2x speed</span><span>Timestamped notes</span><span>Play next lesson</span><span>Search inside videos</span></div>
-    </div>
-    <div class="art"><img src="/assets/shots/player.webp" width="1330" height="1040" alt="The built-in player with speed buttons, play next lesson and a timestamped note" loading="lazy" decoding="async"></div>
-  </div>
-</section>
-
-<section class="sec">
-  <div class="wrap twoup">
-    <div class="tile hot">
-      <h3 class="h3">Downloaded on your PC. Ready for your phone.</h3>
-      <p>Scan a QR code to open a saved video on your phone over the same Wi-Fi network. Need a smaller file? Make a 480p copy or extract an MP3 from a completed video.</p>
-      <p>Your phone and PC must be on the same Wi-Fi. The link works for 10 minutes, and Windows may ask you to allow GrabClip on private networks.</p>
-      <p><a href="/help/#phone-transfer" class="muted">See how phone transfer works</a></p>
-      <div class="tile-art narrow"><img src="/assets/shots/send-to-phone.webp" width="670" height="766" alt="Send to phone dialog with a QR code and a link" loading="lazy" decoding="async"></div>
-    </div>
-    <div class="tile">
-      <h3 class="h3">When a site changes, start with an update, not a reinstall.</h3>
-      <p>GrabClip includes an option to update yt-dlp, the download tool it relies on for many supported sites. The app also checks for new GrabClip releases and offers a built-in update. Every update is signed, so only genuine GrabClip files can be installed.</p>
-      <p><a href="/help/#update-ytdlp" class="muted">Read the update guide</a></p>
-      <div class="tile-art"><img src="/assets/shots/settings-updates.webp" width="940" height="477" alt="Settings, Updates tab: GrabClip version, Check for updates and Update yt-dlp" loading="lazy" decoding="async"></div>
-    </div>
-  </div>
-</section>
-
-<section class="sec">
-  <div class="wrap">
-    <div class="privacy">
+    <div class="privacy rv">
       <div>
         <span class="label">Your PC. Your files.</span>
         <h2 class="h2">Your links stay yours.</h2>
-        <p class="lead">GrabClip doesn't require an account and doesn't track activity inside the app. Your URLs and downloaded files aren't uploaded by GrabClip. Imported browser cookies stay on your PC, where you can remove them whenever you need to.</p>
       </div>
       <div>
         <ul>
           <li><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-lock"/></svg><span><b>No account.</b> Install it and use it.</span></li>
-          <li><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-shield"/></svg><span><b>No tracking inside the app.</b> No ads, and no activity sent to the developer.</span></li>
-          <li><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-cookie"/></svg><span><b>Cookies stay on your PC.</b> Remove them from Settings at any time.</span></li>
+          <li><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-shield"/></svg><span><b>No tracking inside the app.</b> No ads, nothing sent to the developer.</span></li>
+          <li><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-cookie"/></svg><span><b>Cookies stay on your PC.</b> Remove them any time.</span></li>
         </ul>
-        <p class="small">GrabClip communicates with the source websites you choose and with GitHub when checking for updates. <a href="/privacy/">Read the privacy page</a></p>
+        <p class="small"><a href="/privacy/">Read the privacy page</a></p>
       </div>
     </div>
   </div>
@@ -198,10 +187,10 @@
 
 <section class="sec">
   <div class="wrap">
-    <div class="sec-head center">
+    <div class="sec-head center rv">
       <h2 class="h2">Questions people ask first</h2>
     </div>
-    <div class="faq">
+    <div class="faq rv">
 <details open><summary>Is GrabClip free?<svg class="ic plus" aria-hidden="true"><use href="/assets/icons.svg#i-plus"/></svg><svg class="ic minus" aria-hidden="true"><use href="/assets/icons.svg#i-minus"/></svg></summary><div class="ans"><p>Yes. GrabClip is free for personal use. Read the <a href="/license/">licence</a> for the applicable terms.</p></div></details>
 <details><summary>Does GrabClip upload my links or downloaded files?<svg class="ic plus" aria-hidden="true"><use href="/assets/icons.svg#i-plus"/></svg><svg class="ic minus" aria-hidden="true"><use href="/assets/icons.svg#i-minus"/></svg></summary><div class="ans"><p>No. There are no accounts and no tracking inside the app. GrabClip only talks to the websites you download from, and to GitHub when it looks for an update. Read the <a href="/privacy/">privacy page</a>.</p></div></details>
 <details><summary>Does GrabClip work on macOS or Linux?<svg class="ic plus" aria-hidden="true"><use href="/assets/icons.svg#i-plus"/></svg><svg class="ic minus" aria-hidden="true"><use href="/assets/icons.svg#i-minus"/></svg></summary><div class="ans"><p>Not at the moment. GrabClip supports Windows 10 and Windows 11 on 64-bit systems.</p></div></details>
@@ -212,11 +201,11 @@
 </section>
 
 <section class="cta">
-  <div class="wrap">
+  <div class="wrap rv">
     <h2 class="h2">Give your links a better place to go.</h2>
-    <p class="lead">Download GrabClip for Windows and bring downloading, course organization and local playback together in one desktop app.</p>
+    <p class="lead">One installer. No account. No admin password.</p>
     <div class="actions">
-      <a class="btn btn-mint" href="/download/latest"><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-download"/></svg>Download GrabClip</a>
+      <a class="btn btn-mint" href="https://github.com/HamimTalukder/GrabClip-Windows/releases/latest" data-download><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-download"/></svg>Download GrabClip</a>
       <a class="btn btn-ghost" href="/download/">Read the installation guide</a>
     </div>
     <small>Windows 10 or 11, 64-bit. Free for personal use.</small>
@@ -225,9 +214,14 @@
 </main>
 <footer class="foot">
 <div class="wrap">
+<div class="made rv">
+<svg class="ic spark s1" aria-hidden="true"><use href="/assets/icons.svg#i-sparkle"/></svg><svg class="ic spark s2" aria-hidden="true"><use href="/assets/icons.svg#i-sparkle"/></svg><svg class="ic spark s3" aria-hidden="true"><use href="/assets/icons.svg#i-sparkle"/></svg>
+<p class="made-t">Made with <em>curiosity</em></p>
+<p class="made-by">by <a href="/about/">Hamim Talukder Soton</a></p>
+</div>
 <div class="foot-grid">
 <div>
-<a class="brand" href="/" aria-label="GrabClip home"><img src="/assets/logo-icon.svg" alt="" width="30" height="30"><img src="/assets/logo-text.svg" alt="" width="88" height="20"></a>
+<a class="brand" href="/" aria-label="GrabClip home"><img src="/assets/logo-icon.svg" alt="" width="56" height="56"><img src="/assets/logo-text.svg" alt="" width="158" height="36"></a>
 <p class="foot-note">From link to library. Without the busywork.</p>
 </div>
 <div><h4>Product</h4>
@@ -238,7 +232,7 @@
 <a href="/about/">About</a><a href="https://github.com/HamimTalukder" data-contact="github">GitHub</a><a href="https://www.facebook.com/hamim.talukder.soton" data-contact="facebook">Facebook</a><a href="/about/#support">Support GrabClip</a></div>
 </div>
 <div class="fine">
-<p>Made with curiosity by Hamim Talukder Soton. Download content you have the right to save, and respect copyright and the terms of the source websites.</p>
+<p>Download content you have the right to save, and respect copyright and the terms of the source websites.</p>
 <p>GrabClip is an independent project and is not affiliated with YouTube, Facebook, Instagram or TikTok. &copy; <span data-year>2026</span></p>
 </div>
 </div>
