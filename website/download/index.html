@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Download GrabClip for Windows 10 &amp; 11</title>
+<meta name="description" content="Get GrabClip for Windows 10 or 11 (64-bit). View installation steps, system requirements and installer verification instructions.">
+<link rel="canonical" href="https://grabclip.pages.dev/download/">
+<meta name="theme-color" content="#0B0F0E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GrabClip">
+<meta property="og:title" content="Download GrabClip for Windows 10 &amp; 11">
+<meta property="og:description" content="Get GrabClip for Windows 10 or 11 (64-bit). View installation steps, system requirements and installer verification instructions.">
+<meta property="og:url" content="https://grabclip.pages.dev/download/">
+<meta property="og:image" content="https://grabclip.pages.dev/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/logo-icon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/plus-jakarta-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css">
+<script src="/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="announce">GrabClip <b data-version>1.0.1</b> is out. <a href="/changelog/">Explore what's new</a></div>
+<header class="site-head">
+<div class="wrap bar">
+<a class="brand" href="/" aria-label="GrabClip home"><img src="/assets/logo-icon.svg" alt="" width="30" height="30"><img src="/assets/logo-text.svg" alt="GrabClip" width="88" height="20"></a>
+<nav class="pill-nav" aria-label="Main"><a href="/features/">Features</a><a href="/#how">How it works</a><a href="/help/">Help</a><a href="/changelog/">Changelog</a></nav>
+<div class="bar-end">
+<a class="gh" href="https://github.com/HamimTalukder/GrabClip-Windows"><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-github"/></svg><span>GitHub</span></a>
+<a class="btn btn-mint btn-sm" href="/download/latest"><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-download"/></svg>Download</a>
+</div>
+</div>
+</header>
+<main id="main">
+<section class="page-hero">
+  <div class="wrap">
+    <h1 class="display"><span>Ready to bring your</span><span>downloads together?</span></h1>
+    <p class="lead">GrabClip is a Windows desktop app for downloading, organizing and playing supported video and audio content.</p>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="dl-card">
+    <div>
+      <h2 class="h2">GrabClip <span data-version>1.0.1</span> for Windows</h2>
+      <div class="actions"><a class="btn btn-mint" href="/download/latest"><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-download"/></svg>Download latest release</a></div>
+      <p class="file" data-file="{file}">GrabClip_1.0.1_x64-setup.exe</p>
+      <p class="small">The installer comes straight from the official GitHub release, and the download starts right here. <a href="https://github.com/HamimTalukder/GrabClip-Windows/releases">Browse all releases</a></p>
+    </div>
+    <div class="facts">
+      <div><b>Windows 10 and 11</b><span>64-bit. Installs for your user only, so no admin password is needed.</span></div>
+      <div><b>No extra runtime setup</b><span>The download engine is bundled. You do not need Python or a terminal.</span></div>
+      <div><b>Free for personal use</b><span>See the <a href="/license/" class="muted">licence</a> for the applicable terms.</span></div>
+    </div>
+  </div>
+</div>
+
+<section class="sec">
+  <div class="wrap split">
+    <div>
+      <h2 class="h2">Up and running in a few steps.</h2>
+      <p class="lead">Installing takes a minute. Nothing else has to be set up first.</p>
+    </div>
+    <ol class="steps">
+      <li>Press <b>Download latest release</b>. The installer comes from the newest GitHub release.<br><span>Prefer to do it by hand? Open the latest release and download the <code>GrabClip_&lt;version&gt;_x64-setup.exe</code> file under Assets. You do not need the <code>.sig</code> and <code>latest.json</code> files, the app uses them for updates.</span></li>
+      <li>Run the installer and complete the setup.</li>
+      <li>Open GrabClip from the Windows Start menu.</li>
+      <li>Press <b>Add download</b>, paste a link and press <b>Analyze link</b>.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec" id="smartscreen">
+  <div class="wrap split">
+    <div>
+      <h2 class="h2">Why is Windows asking whether to run this app?</h2>
+      <p class="lead">The current installer is not signed with a paid Windows code-signing certificate, so Microsoft Defender SmartScreen may show a blue "Windows protected your PC" screen.</p>
+      <p class="lead">That warning is about the missing certificate. It does not prove that an installer is either malicious or harmless.</p>
+    </div>
+    <div class="prose">
+      <h3>Check the file before you run it</h3>
+      <p>Download GrabClip only from the official GitHub release, which is where the button on this page takes you. Compare the installer's SHA-256 hash with the value shown next to the file on the release page.</p>
+      <div class="code"><code id="hash-cmd" data-file="Get-FileHash .\{file} -Algorithm SHA256">Get-FileHash .\GrabClip_1.0.1_x64-setup.exe -Algorithm SHA256</code><button type="button" class="copy" data-copy-from="#hash-cmd"><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-copy"/></svg>Copy</button></div>
+      <p>Run that command in PowerShell from the folder that holds the installer. If the two hashes match, click <b>More info</b>, then <b>Run anyway</b>.</p>
+      <div class="note"><b>If you cannot verify the file</b>, or you are unsure about a security warning, don't continue.</div>
+      <h3>Antivirus warnings</h3>
+      <p>Some antivirus programs flag the installer because yt-dlp and FFmpeg are inside it. Do not assume every alert is harmless. Check the hash against the official release, and look into any detection you cannot explain.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap split">
+    <div>
+      <h2 class="h2">Already using GrabClip?</h2>
+    </div>
+    <div class="prose">
+      <p>Check for updates from <b>Settings, Updates</b>. GrabClip also looks for a new version by itself when it starts. If a website stops working, try <b>Update yt-dlp</b> first. Browse the <a href="/changelog/">changelog</a> to see what changed in each release.</p>
+      <p>To uninstall, open Windows Settings, then Apps, and remove GrabClip. Your downloaded videos are never touched.</p>
+      <div class="links">
+        <a class="link-btn" href="https://github.com/HamimTalukder/GrabClip-Windows/releases"><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-github"/></svg>All releases</a>
+        <a class="link-btn" href="https://github.com/HamimTalukder/GrabClip-Windows/issues/new/choose"><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg#i-bug"/></svg>Report an issue</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="foot">
+<div class="wrap">
+<div class="foot-grid">
+<div>
+<a class="brand" href="/" aria-label="GrabClip home"><img src="/assets/logo-icon.svg" alt="" width="30" height="30"><img src="/assets/logo-text.svg" alt="" width="88" height="20"></a>
+<p class="foot-note">From link to library. Without the busywork.</p>
+</div>
+<div><h4>Product</h4>
+<a href="/features/">Features</a><a href="/download/">Download</a><a href="/changelog/">Changelog</a><a href="https://github.com/HamimTalukder/GrabClip-Windows/releases">GitHub releases</a></div>
+<div><h4>Resources</h4>
+<a href="/help/">Help Center</a><a href="/faq/">FAQ</a><a href="/privacy/">Privacy</a><a href="/license/">Licence and credits</a></div>
+<div><h4>The developer</h4>
+<a href="/about/">About</a><a href="https://github.com/HamimTalukder" data-contact="github">GitHub</a><a href="https://www.facebook.com/hamim.talukder.soton" data-contact="facebook">Facebook</a><a href="/about/#support">Support GrabClip</a></div>
+</div>
+<div class="fine">
+<p>Made with curiosity by Hamim Talukder Soton. Download content you have the right to save, and respect copyright and the terms of the source websites.</p>
+<p>GrabClip is an independent project and is not affiliated with YouTube, Facebook, Instagram or TikTok. &copy; <span data-year>2026</span></p>
+</div>
+</div>
+<div class="wordmark" aria-hidden="true">GrabClip</div>
+</footer>
+</body>
+</html>
