@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /download
-
-Sitemap: https://grabclip.pages.dev/sitemap.xml
