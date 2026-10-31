@@ -31,6 +31,9 @@ def api(path, **params):
         with urllib.request.urlopen(req, timeout=30) as r:
             return json.load(r)
     except urllib.error.HTTPError as e:
+        if e.code == 404:              # GoatCounter answers 404 when there is nothing to list yet
+            print(f"Note: {path} returned 404, treating it as empty.")
+            return {}
         sys.exit(f"GoatCounter said {e.code} for {path}: {e.read()[:200]!r}")
 
 
@@ -38,6 +41,7 @@ def api(path, **params):
 hits = api("stats/hits", start=START, end=END, limit=100).get("hits") or []
 page_ids = ",".join(str(h["path_id"]) for h in hits if not h.get("event"))
 event_ids = ",".join(str(h["path_id"]) for h in hits if h.get("event") and h.get("path") == "download-click")
+print(f"Found {len(hits)} paths: {len(page_ids.split(',')) if page_ids else 0} pages, {len(event_ids.split(',')) if event_ids else 0} download event.")
 
 
 def total(ids, start):
