@@ -2,6 +2,17 @@
 
 All notable changes to GrabClip for Windows are listed here, newest first.
 
+## 1.0.3 - 2026-11-03
+
+### New
+- **Only real qualities:** after you paste a link, only the video qualities that really exist are shown (Video + Audio and Video only). The real downloaded quality shows in the list and preview.
+- **Best is the default** for video and audio. Other qualities and formats can still be chosen.
+- **Faster Analyze:** the link is checked when you paste it, and the result is reused when the download starts.
+- **Copy diagnostics** (Settings → Help): copies the app, yt-dlp, FFmpeg and Windows versions and the last error in one click.
+- **Smarter error help** for private videos (import cookies) and for failures that continue with cookies (check Updates or send a report).
+- **Website button** in Settings → About.
+- **New installer look** with the GrabClip logo.
+
 ## 1.0.2 - 2026-11-01
 
 ### New
