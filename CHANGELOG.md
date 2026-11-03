@@ -20,7 +20,7 @@ All notable changes to GrabClip for Windows are listed here, newest first.
 - **Clear app data:** Settings → General can now clear history, queue, cookies, notes and settings (and restart GrabClip). Your downloaded videos are never touched.
 - **Smart source tab:** paste a link and GrabClip picks YouTube, Facebook, Instagram, TikTok or Other by itself.
 - **Facebook titles:** Facebook videos are now named after the post text instead of "Video".
-- **New Analyze animation:** 
+- **New Analyze animation:** a small loading animation while a link is analyzed.
 
 ### Fixed
 - Vertical videos (Facebook reels, YouTube Shorts) failed with "Requested format is not available". They download now.
