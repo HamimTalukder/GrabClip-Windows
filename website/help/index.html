@@ -27,7 +27,7 @@
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<div class="announce">GrabClip <b data-version>1.0.2</b> is out. <a href="/changelog/">Explore what's new</a></div>
+<div class="announce">GrabClip <b data-version>1.0.3</b> is out. <a href="/changelog/">Explore what's new</a></div>
 <header class="site-head">
 <div class="wrap bar">
 <a class="brand" href="/" aria-label="GrabClip home"><img src="/assets/logo-icon.svg" alt="" width="30" height="30"><img src="/assets/logo-text.svg" alt="GrabClip" width="88" height="20"></a>
@@ -80,7 +80,7 @@
         <p>Your first download takes a few steps. You don't need to install Python or use a command line.</p>
         <ol class="steps">
           <li>Open GrabClip, press <b>Add download</b>, choose the source tab and paste the link.</li>
-          <li>Press <b>Analyze link</b> or Enter. Check the title, source, duration and estimated size.</li>
+          <li>Press <b>Analyze link</b> or Enter. GrabClip also checks the link as soon as you paste it, so the result is ready quickly. Check the title, source, duration and estimated size.</li>
           <li>Choose the content type, quality and format, then press <b>Next</b>.</li>
           <li>Where available, choose subtitles, thumbnail, fast download or a specific time range.</li>
           <li>Press <b>Download</b>. Follow the progress in Downloads. Finished files appear in Library.</li>
@@ -90,7 +90,7 @@
 
       <details id="format-quality" data-item data-cat="start" data-k="webm mp4 mp3 aac opus flac 1080p 4k audio"><summary>Choose a format and quality<svg class="ic plus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-plus"/></svg><svg class="ic minus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-minus"/></svg></summary><div class="ans">
         <p><b>Content:</b> Video + Audio, Video only, or Audio only.</p>
-        <p><b>Quality:</b> Best (no limit), 4K, 1440p, 1080p, 720p, 480p, 360p or 144p, where the video offers it. For audio you can choose Best, MP3, AAC, OPUS or FLAC.</p>
+        <p><b>Quality:</b> Best (no limit) is selected first. After you paste a link, GrabClip lists only the qualities that really exist for it, from 4K down to 144p. The real quality of a finished download shows in the list and preview. For audio, Best is selected first too, and you can choose MP3, AAC, OPUS or FLAC.</p>
         <p><b>Format:</b> WEBM keeps the original file from the site with no conversion. MP4 converts it. Step 2 shows an estimated size so you know what to expect.</p>
         <p>Some old players cannot play MP4 files that hold VP9 or AV1 video. Try VLC or the built-in player.</p>
       </div></details>
@@ -145,6 +145,7 @@
 
       <details id="signin-errors" data-item data-cat="cookies" data-k="bot check sign in reload error"><summary>Fix sign-in and bot-check errors<svg class="ic plus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-plus"/></svg><svg class="ic minus" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-minus"/></svg></summary><div class="ans">
         <p>If a download fails with a sign-in or bot-check message, export fresh cookies and import them again with <b>Settings, Cookies, Replace</b>.</p>
+        <p>If a private video fails, GrabClip tells you to import cookies, with one click to Settings, Cookies. If it still fails with cookies, it points you to Settings, Updates or Send a report.</p>
         <p>If the message says the page needs to be reloaded, the cookies are old or broken. Remove them, or import fresh ones. If a whole site has stopped working, <a href="#update-ytdlp">update yt-dlp</a> as well.</p>
       </div></details>
     </div>
@@ -269,6 +270,7 @@
     <div>
       <h2 class="h2">Something not working as expected?</h2>
       <p class="lead">Before reporting a problem, check the guide above and try the recommended steps. If the problem stays, send a report from GrabClip (Settings, Help, Send a report) or open a GitHub issue.</p>
+      <p>In GrabClip, Settings, Help, <b>Send a report</b> now copies your GrabClip, yt-dlp, FFmpeg and Windows versions and the last error in one click. Your links, files and cookies are not included.</p>
       <div class="note"><b>Never attach</b> <code>cookies.txt</code>, login details or other session secrets to a report.</div>
       <div class="links">
         <a class="link-btn" href="https://github.com/HamimTalukder/GrabClip-Windows/issues/new/choose"><svg class="ic" aria-hidden="true"><use href="/assets/icons.svg?v=2#i-bug"/></svg>Open a GitHub issue</a>
